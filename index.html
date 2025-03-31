@@ -11,13 +11,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
       background-color: #0073e6;
       color: white;
-      padding: 3rem;
+      padding: 4rem;
       text-align: center;
     }
     header img {
@@ -57,7 +57,23 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    .sponsor-benefits, .about {
+    .interactive-images {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .interactive-images img {
+      width: 45%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    .interactive-images img:hover {
+      transform: scale(1.1);
+    }
+    .sponsor-benefits {
       background-color: #e1f5fe;
       padding: 2rem;
       margin: 2rem 0;
@@ -68,40 +84,55 @@
       border: none;
       margin-top: 1rem;
     }
+    .cta {
+      background-color: #ff6f00;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <img src="logo-nomad-raid.png" alt="Logo Nomad Raid">
     <h1>LAGBSR1 - Nomad Raid 2026</h1>
     <p>Ensemble, apportons un soutien humanitaire au Maroc !</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">Notre Équipe</a>
     <a href="#project">Le Projet</a>
     <a href="#solidarity">Solidarité</a>
+    <a href="#needs">Besoins</a>
+    <a href="#sponsors">Sponsors</a>
     <a href="#don">Faire un Don</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" class="about">
+  <!-- About Section -->
+  <section id="about">
     <h2>Qui sommes-nous ?</h2>
-    <p>Nous sommes **Loup** et **Alexandre**, deux amis d'enfance de **Seine-et-Marne**, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous participerons au **Nomad Raid** en **Peugeot 205**, une aventure solidaire à travers le **Maroc** pour apporter des **dons humanitaires** aux communautés marocaines.</p>
-    <div>
-      <img src="image1.jpg" alt="Préparation du véhicule" style="max-width: 48%; margin-right: 2%; border-radius: 10px;">
-      <img src="image2.jpg" alt="Solidarité sur place" style="max-width: 48%; border-radius: 10px;">
+    <p>Nous sommes **Loup** et **Alexandre**, deux amis d'enfance de **Seine-et-Marne**, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous participerons au **Nomad Raid** à destination du Maroc à bord d’une **Peugeot 205**. Notre objectif ? Apporter des **dons humanitaires** aux enfants du Maroc. Ce projet allie **aventure** et **solidarité** !</p>
+
+    <div class="interactive-images">
+      <img src="image1.jpg" alt="Préparation du véhicule" onclick="window.location.href='https://www.leetchi.com/fr/c/lagbsr1-nomadraid'">
+      <img src="image2.jpg" alt="Solidarité sur place" onclick="window.location.href='https://www.leetchi.com/fr/c/lagbsr1-nomadraid'">
     </div>
   </section>
 
+  <!-- Project Section -->
   <section id="project">
     <h2>Le Projet</h2>
     <p>Le **Nomad Raid 2026** est une aventure solidaire qui combine défi automobile et engagement humanitaire. Nous allons traverser le **désert marocain** pour apporter des **vêtements**, des **vélos**, des **jouets** et des **fournitures médicales** aux populations locales. Notre objectif est d’améliorer le quotidien des enfants et des communautés du sud du Maroc grâce à vos dons.</p>
   </section>
 
+  <!-- Solidarity Section -->
   <section id="solidarity">
-    <h2>Nos actions solidaires</h2>
+    <h2>Nos Actions Solidaires</h2>
     <ul>
       <li><strong>Vélos :</strong> Distribution de vélos réparés aux enfants marocains 🚲</li>
       <li><strong>Matériel scolaire :</strong> Dons de fournitures pour les écoles 📚</li>
@@ -110,34 +141,33 @@
     </ul>
   </section>
 
-  <section id="don">
-    <h2>Faire un Don 💖</h2>
-    <p>Pour réaliser cette aventure, nous avons besoin de **votre soutien**. Chaque euro collecté nous aidera à financer la préparation de notre véhicule, à acheter le matériel nécessaire et à mener à bien nos actions solidaires sur place.</p>
-    <p>**Rejoignez notre mission humanitaire** en faisant un don via notre **cagnotte Leetchi**.</p>
-    <a href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank" class="btn">Faire un Don via Leetchi</a>
+  <!-- Needs Section -->
+  <section id="needs">
+    <h2>Nos Besoins</h2>
+    <h3>Budget estimé : 8240 €</h3>
+    <ul>
+      <li>Inscription : 3240 €</li>
+      <li>Assurance maladie et rapatriement : 40 €</li>
+      <li>Hébergements : 750 €</li>
+      <li>Repas : 120 €</li>
+      <li>Matériel de bivouac : 500 €</li>
+      <li>Péages : 250 €</li>
+      <li>Carburant : 750 €</li>
+      <li>Achat véhicule : 2300 €</li>
+      <li>Assurance véhicule : 480 €</li>
+      <li>Mécanique, réparations : 1500 €</li>
+      <li>Marge supplémentaire : 1000 €</li>
+    </ul>
+    <h3>Matériel à collecter</h3>
+    <ul>
+      <li>Vélos 🚲</li>
+      <li>Vêtements 👕</li>
+      <li>Jouets 🧸</li>
+      <li>Matériel médical 💉</li>
+      <li>Matériel d’hygiène 🧴</li>
+    </ul>
   </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Prénom" placeholder="Prénom" required>
-      <input type="text" name="Nom" placeholder="Nom" required>
-      <input type="email" name="Email" placeholder="Email" required>
-      <textarea name="Message" rows="4" placeholder="Votre message..." required></textarea>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-    <h3>Localisation du projet :</h3>
-    <iframe src="https://www.google.com/maps?q=CESI+Angoulême&output=embed"></iframe>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 LAGBSR1 | Nomad Raid 2026</p>
-  </footer>
-
-</body>
-</html>
-
-
-
-
-
+  <!-- Sponsors Section -->
+  <section id="sponsors" class="sponsor-benefits">
+    <h2>Avantages
