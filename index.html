@@ -98,6 +98,18 @@
     .sponsor-benefits h2, .sponsor-benefits h3 {
       color: white;
     }
+    .contact-form input, .contact-form textarea, .contact-form button {
+      padding: 10px;
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 600px;
+      display: block;
+    }
+    .contact-form button {
+      background-color: #ff6f00;
+      color: white;
+      cursor: pointer;
+    }
   </style>
   <script>
     let slideIndex = 0;
@@ -134,12 +146,17 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <section id="raid-info" style="background-color: #ffcc80; padding: 2rem; text-align: center;">
+    <h2>Qu'est-ce que le Nomad Raid ?</h2>
+    <p style="font-size: 1.2rem; color: #3e2723; max-width: 800px; margin: auto;">
+      Le <strong>Nomad Raid</strong> est un raid automobile solidaire qui se déroule chaque année dans le désert marocain. Le but : traverser le pays en véhicule tout en apportant des dons matériels aux populations locales. Ce n’est pas une course de vitesse, mais un défi sportif et humanitaire. Grâce à votre soutien, nous allons récolter des vélos, du matériel scolaire, des vêtements et bien plus pour les enfants et les familles marocaines.
+    </p>
+  </section>
+
   <section id="about" style="background-color: #ff7043; color: white; padding: 2rem; text-align: center;">
     <h2>Deux copains, une 205 et du sable</h2>
     <h3>Oasis Riders</h3>
     <p>Nous sommes Loup et Alexandre, deux amis d'enfance de Seine-et-Marne, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous réaliserons un rêve en participant au Nomad Raid à destination du Maroc à bord d’une Peugeot 205. Notre équipage, Oasis Riders, combine exploration et engagement solidaire. Cette aventure est l’occasion de vivre une expérience unique tout en soutenant ceux qui en ont besoin, notamment les enfants et les communautés isolées du désert marocain, grâce à des actions humanitaires concrètes.</p>
-    <p>Au-delà de l’aspect personnel, la dimension humanitaire du raid est au cœur de notre motivation. Nous sommes impatients d’apporter les dons que nous aurons collectés pour soutenir les personnes dans le besoin, notamment les enfants marocains. Ce raid représente aussi une chance inédite d’explorer des paysages fascinants, des montagnes de l’Atlas aux dunes du Sahara, en passant par les villages berbères.</p>
-    <p>Participez à notre aventure en devenant sponsor ! En nous soutenant, vous permettrez à deux passionnés de réaliser leur rêve tout en ayant un impact positif à travers des actions solidaires et humanitaires.</p>
     <div style="display: flex; gap: 2rem; justify-content: center;">
       <img src="LAGBSR1-image1.jpg" alt="Mécanique et préparation" style="max-width: 45%; border-radius: 10px;">
       <img src="LAGBSR1-image2.jpg" alt="Véhicules et enfants" style="max-width: 45%; border-radius: 10px;">
@@ -212,10 +229,6 @@
         <p>Engagement solidaire valorisé</p>
       </div>
     </div>
-    <div class="sponsor-benefits-content">
-      <div><h3>Le petit plus</h3><p>Un projet marquant humainement.</p></div>
-      <img src="enfants-velo.jpg" alt="Enfants vélos">
-    </div>
   </section>
 
   <section id="don">
@@ -227,7 +240,7 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>Besoin d'infos ? Écrivez-nous :</p>
-    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain">
+    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain" class="contact-form">
       <input type="text" name="Prénom" placeholder="Prénom" required>
       <input type="text" name="Nom" placeholder="Nom" required>
       <input type="email" name="Email" placeholder="Email" required>
@@ -242,9 +255,9 @@
   </footer>
 
   <p style="text-align:center; font-style:italic;">Version alternative : formulaire connecté à Google Sheet possible.</p>
-
 </body>
 </html>
+
 
 
 
