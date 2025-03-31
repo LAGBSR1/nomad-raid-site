@@ -1,33 +1,33 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LAGBSR1 - Nomad Raid</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8e1;
-      color: #3e2723;
-    }
-    header {
-      background-color: #ff8f00;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-    }
-    header img.logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      height: 60px;
-    }
-    nav {
-      background: #ffe0b2;
-      padding: 1rem;
+<section id="contact">
+  <h2>Contactez-nous !</h2>
+  <p>Sentez-vous libre de nous contacter pour plus d’informations, si vous souhaitez faire un don ou devenir notre sponsor !</p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+    <form style="flex: 1; min-width: 300px;" action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain">
+      <div style="display: flex; gap: 1rem;">
+        <input type="text" name="Prénom" placeholder="* Prénom" required style="flex: 1; padding: 10px;">
+        <input type="text" name="Nom" placeholder="* Nom" required style="flex: 1; padding: 10px;">
+      </div>
+      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+        <input type="email" name="Email" placeholder="* Email" required style="flex: 1; padding: 10px;">
+        <input type="text" name="Téléphone" placeholder="Tél." style="flex: 1; padding: 10px;">
+      </div>
+      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+        <select name="Vous êtes" required style="flex: 1; padding: 10px;">
+          <option value="">* Vous êtes</option>
+          <option value="Particulier">Particulier</option>
+          <option value="Entreprise">Entreprise</option>
+          <option value="Autre">Autre</option>
+        </select>
+        <input type="text" name="Entreprise" placeholder="Nom de l'entreprise" style="flex: 1; padding: 10px;">
+      </div>
+      <textarea name="Message" placeholder="* Message" required rows="5" style="margin-top: 1rem; width: 100%; padding: 10px;"></textarea>
+      <button type="submit" style="margin-top: 1rem; background-color: #e65100; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Envoyer</button>
+    </form>
+
+    <img src="contact-voiture.jpg" alt="Voiture Nomad Raid" style="flex: 1; max-width: 400px; border-radius: 10px;">
+  </div>
+</section>
       text-align: center;
     }
     nav a {
