@@ -8,12 +8,20 @@
   <link rel="stylesheet" href="styles.min.css">
   <script src="scripts.min.js" defer></script>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff8e1;
-      color: #3e2723;
-    }
+   <video autoplay muted loop id="background-video">
+  <source src="https://youtu.be/Y6jmCEYZJI0?si=Ncq8A3a4R5Nr-60c" type="video/mp4">
+</video>
+
+<style>
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+</style>
     header {
       background: #ff8f00;
       color: white;
