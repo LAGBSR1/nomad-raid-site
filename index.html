@@ -1,115 +1,46 @@
-<section id="contact">
-  <h2>Contactez-nous !</h2>
-  <p>Sentez-vous libre de nous contacter pour plus d’informations, si vous souhaitez faire un don ou devenir notre sponsor !</p>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-    <form style="flex: 1; min-width: 300px;" action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain">
-      <div style="display: flex; gap: 1rem;">
-        <input type="text" name="Prénom" placeholder="* Prénom" required style="flex: 1; padding: 10px;">
-        <input type="text" name="Nom" placeholder="* Nom" required style="flex: 1; padding: 10px;">
-      </div>
-      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-        <input type="email" name="Email" placeholder="* Email" required style="flex: 1; padding: 10px;">
-        <input type="text" name="Téléphone" placeholder="Tél." style="flex: 1; padding: 10px;">
-      </div>
-      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-        <select name="Vous êtes" required style="flex: 1; padding: 10px;">
-          <option value="">* Vous êtes</option>
-          <option value="Particulier">Particulier</option>
-          <option value="Entreprise">Entreprise</option>
-          <option value="Autre">Autre</option>
-        </select>
-        <input type="text" name="Entreprise" placeholder="Nom de l'entreprise" style="flex: 1; padding: 10px;">
-      </div>
-      <textarea name="Message" placeholder="* Message" required rows="5" style="margin-top: 1rem; width: 100%; padding: 10px;"></textarea>
-      <button type="submit" style="margin-top: 1rem; background-color: #e65100; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Envoyer</button>
-    </form>
-
-    <img src="contact-voiture.jpg" alt="Voiture Nomad Raid" style="flex: 1; max-width: 400px; border-radius: 10px;">
-  </div>
-</section>
-      text-align: center;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAGBSR1 - Nomad Raid 2026</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fff8e1; color: #3e2723; }
+    header {
+      background: #ff8f00; color: white; padding: 2rem; text-align: center; position: relative;
+    }
+    header img.logo {
+      position: absolute; top: 20px; left: 20px; height: 60px;
+    }
+    nav {
+      background: #ffe0b2; padding: 1rem; text-align: center;
     }
     nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #bf360c;
-      font-weight: bold;
+      margin: 0 1rem; text-decoration: none; color: #bf360c; font-weight: bold;
     }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
     .btn {
-      background-color: #ff6f00;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
+      background-color: #e65100; color: white; padding: 0.8rem 1.2rem; border: none;
+      border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 1rem;
     }
-    .gallery, .sponsors, .actions, .material-needs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+    .gallery, .actions, .material-needs, .sponsors, .sponsor-benefits-content {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center;
     }
-    .gallery img, .sponsors img, .actions img, .budget-chart img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-    .action-item, .material-item {
-      max-width: 300px;
-      text-align: center;
-    }
-    .action-item h3, .material-item h4 {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-    }
-    .slide {
-      display: none;
-      width: 100%;
-    }
-    .slide img {
-      width: 100%;
-      height: auto;
-    }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
-    footer {
-      background-color: #3e2723;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+    img { border-radius: 10px; max-width: 100%; height: auto; }
+    .action-item, .material-item { max-width: 300px; text-align: center; }
+    .slideshow-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; }
+    .slide { display: none; width: 100%; }
+    iframe { width: 100%; height: 300px; border: none; border-radius: 10px; margin-top: 1rem; }
+    footer { background-color: #3e2723; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .sponsor-benefits { background-color: #3b5998; color: white; padding: 2rem; }
+    .sponsor-benefits h2, .sponsor-benefits h3 { color: white; }
   </style>
   <script>
     let slideIndex = 0;
     function showSlides() {
-      let slides = document.getElementsByClassName("slide");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
+      const slides = document.getElementsByClassName("slide");
+      for (let slide of slides) slide.style.display = "none";
+      slideIndex = (slideIndex + 1 > slides.length) ? 1 : slideIndex + 1;
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 3000);
     }
@@ -131,131 +62,115 @@
 
   <nav>
     <a href="#about">Notre Équipe</a>
-    <a href="#project">Le Projet</a>
+    <a href="#project">Projet</a>
     <a href="#solidarity">Solidarité</a>
-    <a href="#needs">Nos Besoins</a>
-    <a href="#don">Nous Soutenir</a>
-    <a href="#gallery">Galerie</a>
+    <a href="#needs">Besoins</a>
     <a href="#sponsors">Sponsors</a>
+    <a href="#don">Don</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>Qui sommes-nous ?</h2>
-    <p>Nous sommes <strong>LAGBSR1</strong>, une équipe de deux étudiants passionnés par l’aventure, la solidarité et le dépassement de soi. Notre objectif : relever le défi du Nomad Raid 2026 dans une Peugeot 205, tout en apportant notre aide aux populations du sud marocain.</p>
+    <p>Nous sommes <strong>LAGBSR1</strong>, une équipe d’aventuriers solidaires en route pour le Nomad Raid 2026 en Peugeot 205.</p>
   </section>
 
   <section id="project">
     <h2>Le Projet</h2>
-    <p>Le Nomad Raid est un raid automobile solidaire à travers le Maroc. Il ne s’agit pas d’une course, mais d’une aventure humaine et logistique : traverser le désert, apporter du matériel scolaire et médical, et vivre une expérience de solidarité unique.</p>
+    <p>Un raid solidaire au Maroc, alliant défi mécanique et engagement humanitaire auprès des enfants marocains.</p>
   </section>
 
   <section id="solidarity">
-    <h2>Un raid solidaire</h2>
+    <h2>Nos actions solidaires</h2>
     <div class="actions">
-      <div class="action-item">
-        <img src="solidarite1.jpg" alt="Don de matériel solidaire">
-        <h3>Don de matériel solidaire</h3>
-        <p>20 kg de matériel paramédical, hygiène, jouets, fournitures scolaires...</p>
-      </div>
-      <div class="action-item">
-        <img src="solidarite2.jpg" alt="Don de vélos">
-        <h3>Don de vélos</h3>
-        <p>Un vélo enfant/adulte réparé et amené sur place.</p>
-      </div>
-      <div class="action-item">
-        <img src="solidarite3.jpg" alt="Réparation de vélos">
-        <h3>Réparation de vélos</h3>
-        <p>Sur place, pour assurer la mobilité scolaire des enfants.</p>
-      </div>
-      <div class="action-item">
-        <img src="solidarite4.jpg" alt="Couscous solidaire">
-        <h3>Couscous solidaire</h3>
-        <p>Repas convivial avec les habitants, bénéfices reversés à une association locale.</p>
-      </div>
+      <div class="action-item"><img src="solidarite1.jpg"><h3>Matériel solidaire</h3><p>20kg à livrer : hygiène, scolaire, vêtements...</p></div>
+      <div class="action-item"><img src="solidarite2.jpg"><h3>Don de vélos</h3><p>1 vélo enfant par équipage à réparer et livrer.</p></div>
+      <div class="action-item"><img src="solidarite3.jpg"><h3>Réparations sur place</h3><p>Ateliers pour remettre les vélos en état.</p></div>
+      <div class="action-item"><img src="solidarite4.jpg"><h3>Couscous solidaire</h3><p>Repas partagé, bénéfices reversés.</p></div>
     </div>
   </section>
 
   <section id="needs">
-    <h2>Nos besoins pour l’aventure</h2>
-    <h3>Budget estimé : 8240 €</h3>
+    <h2>Nos besoins</h2>
+    <h3>Budget : 8240 €</h3>
     <ul>
       <li>Inscription : 3240 €</li>
-      <li>Assurance maladie et rapatriement : 40 €</li>
-      <li>Hébergements : 750 €</li>
-      <li>Repas : 120 €</li>
-      <li>Matériel de bivouac : 500 €</li>
-      <li>Péages : 250 €</li>
-      <li>Carburant : 750 €</li>
-      <li>Achat véhicule : 2300 €</li>
-      <li>Assurance véhicule : 480 €</li>
-      <li>Mécanique, réparations : 1500 €</li>
-      <li>Marge supplémentaire : 1000 €</li>
+      <li>Assurance : 40 € + véhicule : 480 €</li>
+      <li>Hébergement : 750 €, repas : 120 €</li>
+      <li>Bivouac : 500 €, péages : 250 €, carburant : 750 €</li>
+      <li>Achat véhicule : 2300 €, mécanique : 1500 €</li>
+      <li>Marge sécurité : 1000 €</li>
     </ul>
-    <div class="budget-chart">
-      <img src="camembert-budget.png" alt="Camembert Budget">
-    </div>
-    <h3>Matériel pour les enfants</h3>
+    <img src="camembert-budget.png" alt="Budget Camembert">
+    <h3>Matériel à collecter</h3>
     <div class="material-needs">
-      <div class="material-item">
-        <h4>🚲 2 vélos enfants/adultes</h4>
-        <p>Avec pneus, chambres à air, casques...</p>
+      <div class="material-item"><h4>🚲 Vélos</h4><p>+ chambres à air, casques</p></div>
+      <div class="material-item"><h4>👕 Vêtements</h4><p>Chauds et enfants</p></div>
+      <div class="material-item"><h4>⚽ Jouets</h4><p>Ballons, jeux, coloriages</p></div>
+      <div class="material-item"><h4>🧰 Matériel médical</h4><p>Pansements, désinfectants</p></div>
+      <div class="material-item"><h4>🧼 Hygiène</h4><p>Brosse à dents, savon...</p></div>
+    </div>
+  </section>
+
+  <section id="sponsors" class="sponsor-benefits">
+    <h2>Avantages pour les sponsors</h2>
+    <div class="sponsor-benefits-content">
+      <img src="sponsors-avantages.jpg" alt="Tournage">
+      <div>
+        <h3>Médiatisation</h3>
+        <ul>
+          <li>Photos/vidéos pro</li>
+          <li>Salle de presse + réseaux sociaux</li>
+          <li><a href="https://www.nomadraid.fr" target="_blank" style="color:#ffcc80;">www.nomadraid.fr</a></li>
+        </ul>
+        <h3>Visibilité</h3>
+        <ul>
+          <li>Logo sur voiture</li>
+          <li>Réseaux sociaux + médias</li>
+        </ul>
+        <h3>Image & Valeurs</h3>
+        <p>Engagement solidaire valorisé</p>
       </div>
-      <div class="material-item">
-        <h4>👕 Vêtements enfants</h4>
-        <p>Blousons, chaussures, pulls, pantalons...</p>
-      </div>
-      <div class="material-item">
-        <h4>⚽ Jouets</h4>
-        <p>Ballons, jeux, coloriages, peluches...</p>
-      </div>
-      <div class="material-item">
-        <h4>🧰 Matériel médical</h4>
-        <p>Pansements, compresses, désinfectants...</p>
-      </div>
-      <div class="material-item">
-        <h4>🧼 Produits d’hygiène</h4>
-        <p>Brosse à dents, gel douche, shampooing...</p>
-      </div>
+    </div>
+    <div class="sponsor-benefits-content">
+      <div><h3>Le petit plus</h3><p>Un projet marquant humainement.</p></div>
+      <img src="enfants-velo.jpg" alt="Enfants vélos">
     </div>
   </section>
 
   <section id="don">
-    <h2>Nous soutenir</h2>
-    <p>Chaque don compte ! Vous pouvez nous soutenir via notre cagnotte en ligne :</p>
-    <a class="btn" href="https://oasisridersnomadraid.wixsite.com/oasisriders-nomadrai" target="_blank">Faire un don</a>
+    <h2>Faire un don</h2>
+    <p>Tout soutien, financier ou matériel, a un impact fort. Merci 💛</p>
+    <a class="btn" href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank">>> Faire un don via Leetchi <<</a>
   </section>
 
   <section id="gallery">
     <h2>Galerie</h2>
     <div class="gallery">
-      <img src="photo1.jpg" alt="Préparation véhicule">
-      <img src="photo2.jpg" alt="Notre équipe">
-      <img src="photo3.jpg" alt="Raid désert">
-    </div>
-  </section>
-
-  <section id="sponsors">
-    <h2>Nos sponsors</h2>
-    <div class="sponsors">
-      <img src="logo1.png" alt="Sponsor 1">
-      <img src="logo2.png" alt="Sponsor 2">
-      <img src="logo3.png" alt="Sponsor 3">
+      <img src="photo1.jpg" alt="Préparation">
+      <img src="photo2.jpg" alt="Raid Maroc">
+      <img src="photo3.jpg" alt="Solidarité">
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact & Réseaux</h2>
-    <p>
-      📸 Instagram : @lagbsr1.nomad<br>
-      📘 Facebook : LAGBSR1 - Nomad Raid<br>
-      📧 Email : lagbsr1.nomad@gmail.com
-    </p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9991543246373!2d2.2922926156746826!3d48.85884407928715" allowfullscreen loading="lazy"></iframe>
+    <h2>Contact</h2>
+    <p>Besoin d'infos ? Écrivez-nous :</p>
+    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Prénom" placeholder="Prénom" required>
+      <input type="text" name="Nom" placeholder="Nom" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Message" rows="4" placeholder="Votre message..." required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+    <iframe src="https://www.google.com/maps?q=CESI+Angoulême&output=embed"></iframe>
   </section>
 
   <footer>
     <p>&copy; 2025 LAGBSR1 | Nomad Raid</p>
   </footer>
+
+  <p style="text-align:center; font-style:italic;">Version alternative : formulaire connecté à Google Sheet possible.</p>
 </body>
 </html>
+
