@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LAGBSR1 - Nomad Raid 2026</title>
+  <meta name="description" content="Rejoignez LAGBSR1 pour le Nomad Raid 2026 : une aventure solidaire à travers le Maroc à bord d'une Peugeot 205. Aidez-nous à apporter des dons aux enfants du Maroc.">
+  <link rel="stylesheet" href="styles.min.css">
+  <script src="scripts.min.js" defer></script>
   <style>
     body {
       margin: 0;
@@ -28,6 +31,9 @@
       background: #ffe0b2;
       padding: 1rem;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
       margin: 0 1rem;
@@ -50,22 +56,6 @@
       display: inline-block;
       margin-top: 1rem;
     }
-    .gallery, .actions, .material-needs, .sponsors, .sponsor-benefits-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    img {
-      border-radius: 10px;
-      max-width: 100%;
-      height: auto;
-    }
-    .action-item, .material-item {
-      max-width: 300px;
-      text-align: center;
-    }
     .slideshow-container {
       position: relative;
       max-width: 100%;
@@ -75,6 +65,10 @@
     .slide {
       display: none;
       width: 100%;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
     }
     iframe {
       width: 100%;
@@ -111,17 +105,6 @@
       cursor: pointer;
     }
   </style>
-  <script>
-    let slideIndex = 0;
-    function showSlides() {
-      const slides = document.getElementsByClassName("slide");
-      for (let slide of slides) slide.style.display = "none";
-      slideIndex = (slideIndex + 1 > slides.length) ? 1 : slideIndex + 1;
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000);
-    }
-    window.onload = showSlides;
-  </script>
 </head>
 <body>
   <header>
@@ -131,9 +114,9 @@
   </header>
 
   <div class="slideshow-container">
-    <div class="slide"><img src="slide1.jpg" alt="Slide 1"></div>
-    <div class="slide"><img src="slide2.jpg" alt="Slide 2"></div>
-    <div class="slide"><img src="slide3.jpg" alt="Slide 3"></div>
+    <div class="slide"><img src="slide1.jpg" alt="Slide 1" loading="lazy"></div>
+    <div class="slide"><img src="slide2.jpg" alt="Slide 2" loading="lazy"></div>
+    <div class="slide"><img src="slide3.jpg" alt="Slide 3" loading="lazy"></div>
   </div>
 
   <nav>
@@ -148,37 +131,20 @@
 
   <section id="raid-info" style="background-color: #ffcc80; padding: 2rem; text-align: center;">
     <h2>Qu'est-ce que le Nomad Raid ?</h2>
-    <p style="font-size: 1.2rem; color: #3e2723; max-width: 800px; margin: auto;">
-      Le <strong>Nomad Raid</strong> est un raid automobile solidaire qui se déroule chaque année dans le désert marocain. Le but : traverser le pays en véhicule tout en apportant des dons matériels aux populations locales. Ce n’est pas une course de vitesse, mais un défi sportif et humanitaire. Grâce à votre soutien, nous allons récolter des vélos, du matériel scolaire, des vêtements et bien plus pour les enfants et les familles marocaines.
-    </p>
+    <p>Le <strong>Nomad Raid</strong> est un raid automobile solidaire qui se déroule chaque année dans le désert marocain. Le but : traverser le pays en véhicule tout en apportant des dons matériels aux populations locales. Ce n’est pas une course de vitesse, mais un défi sportif et humanitaire. Grâce à votre soutien, nous allons récolter des vélos, du matériel scolaire, des vêtements et bien plus pour les enfants et les familles marocaines.</p>
   </section>
 
   <section id="about" style="background-color: #ff7043; color: white; padding: 2rem; text-align: center;">
     <h2>Deux copains, une 205 et du sable</h2>
     <h3>Oasis Riders</h3>
-    <p>Nous sommes Loup et Alexandre, deux amis d'enfance de Seine-et-Marne, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous réaliserons un rêve en participant au Nomad Raid à destination du Maroc à bord d’une Peugeot 205. Notre équipage, Oasis Riders, combine exploration et engagement solidaire. Cette aventure est l’occasion de vivre une expérience unique tout en soutenant ceux qui en ont besoin, notamment les enfants et les communautés isolées du désert marocain, grâce à des actions humanitaires concrètes.</p>
+    <p>Nous sommes Loup et Alexandre, deux amis d'enfance de Seine-et-Marne, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous réaliserons un rêve en participant au Nomad Raid à destination du Maroc à bord d’une Peugeot 205. Notre équipage, Oasis Riders, combine exploration et engagement solidaire.</p>
     <div style="display: flex; gap: 2rem; justify-content: center;">
-      <img src="LAGBSR1-image1.jpg" alt="Mécanique et préparation" style="max-width: 45%; border-radius: 10px;">
-      <img src="LAGBSR1-image2.jpg" alt="Véhicules et enfants" style="max-width: 45%; border-radius: 10px;">
+      <img src="LAGBSR1-image1.jpg" alt="Mécanique et préparation" style="max-width: 45%; border-radius: 10px;" loading="lazy">
+      <img src="LAGBSR1-image2.jpg" alt="Véhicules et enfants" style="max-width: 45%; border-radius: 10px;" loading="lazy">
     </div>
     <div style="text-align: center; margin-top: 2rem;">
       <a class="btn" href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank">Faire un don sur leetchi</a>
       <a class="btn" href="#sponsors" style="margin-left: 1rem;">Devenir sponsor</a>
-    </div>
-  </section>
-
-  <section id="project">
-    <h2>Le Projet</h2>
-    <p>Un raid solidaire au Maroc, alliant défi mécanique et engagement humanitaire auprès des enfants marocains.</p>
-  </section>
-
-  <section id="solidarity">
-    <h2>Nos actions solidaires</h2>
-    <div class="actions">
-      <div class="action-item"><img src="solidarite1.jpg"><h3>Matériel solidaire</h3><p>20kg à livrer : hygiène, scolaire, vêtements...</p></div>
-      <div class="action-item"><img src="solidarite2.jpg"><h3>Don de vélos</h3><p>1 vélo enfant par équipage à réparer et livrer.</p></div>
-      <div class="action-item"><img src="solidarite3.jpg"><h3>Réparations sur place</h3><p>Ateliers pour remettre les vélos en état.</p></div>
-      <div class="action-item"><img src="solidarite4.jpg"><h3>Couscous solidaire</h3><p>Repas partagé, bénéfices reversés.</p></div>
     </div>
   </section>
 
@@ -198,21 +164,13 @@
       <li>Mécanique, réparations : 1500 €</li>
       <li>Marge supplémentaire : 1000 €</li>
     </ul>
-    <img src="camembert-budget.png" alt="Camembert Budget">
-    <h3>Matériel à collecter</h3>
-    <div class="material-needs">
-      <div class="material-item"><h4>🚲 Vélos</h4><p>+ chambres à air, casques</p></div>
-      <div class="material-item"><h4>👕 Vêtements</h4><p>Chauds et enfants</p></div>
-      <div class="material-item"><h4>⚽ Jouets</h4><p>Ballons, jeux, coloriages</p></div>
-      <div class="material-item"><h4>🧰 Matériel médical</h4><p>Pansements, désinfectants</p></div>
-      <div class="material-item"><h4>🧼 Hygiène</h4><p>Brosse à dents, savon...</p></div>
-    </div>
+    <img src="camembert-budget.png" alt="Camembert Budget" loading="lazy">
   </section>
 
   <section id="sponsors" class="sponsor-benefits">
     <h2>Avantages pour les sponsors</h2>
     <div class="sponsor-benefits-content">
-      <img src="sponsors-avantages.jpg" alt="Tournage">
+      <img src="sponsors-avantages.jpg" alt="Tournage" loading="lazy">
       <div>
         <h3>Médiatisation</h3>
         <ul>
