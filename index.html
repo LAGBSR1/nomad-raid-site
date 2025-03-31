@@ -9,24 +9,32 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #fff8e1;
+      color: #3e2723;
     }
     header {
-      background-color: #004aad;
+      background-color: #ff8f00;
       color: white;
       padding: 2rem;
       text-align: center;
+      position: relative;
+    }
+    header img.logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 60px;
     }
     nav {
-      background: #eee;
+      background: #ffe0b2;
       padding: 1rem;
       text-align: center;
     }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #004aad;
+      color: #bf360c;
+      font-weight: bold;
     }
     section {
       padding: 2rem;
@@ -34,7 +42,7 @@
       margin: auto;
     }
     .btn {
-      background-color: #004aad;
+      background-color: #ff6f00;
       color: white;
       padding: 0.8rem 1.2rem;
       border: none;
@@ -43,23 +51,40 @@
       display: inline-block;
       margin-top: 1rem;
     }
-    .gallery {
+    .gallery, .sponsors, .actions, .material-needs {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
-      margin-top: 1rem;
+      gap: 1.5rem;
     }
-    .gallery img {
-      width: 300px;
+    .gallery img, .sponsors img, .actions img, .budget-chart img {
+      width: 100%;
+      max-width: 300px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-    .sponsors img {
-      max-height: 80px;
-      margin: 1rem;
-      vertical-align: middle;
+    .action-item, .material-item {
+      max-width: 300px;
+      text-align: center;
+    }
+    .action-item h3, .material-item h4 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
     }
     iframe {
       width: 100%;
@@ -68,77 +93,52 @@
       border-radius: 10px;
       margin-top: 1rem;
     }
-    .highlight-box {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-    }
-    .highlight-box img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-    .highlight-text {
-      flex: 1;
-      min-width: 280px;
-    }
     footer {
-      background-color: #222;
+      background-color: #3e2723;
       color: white;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
     }
   </style>
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    window.onload = showSlides;
+  </script>
 </head>
 <body>
   <header>
+    <img src="logo-nomad-raid.png" alt="Logo Nomad Raid" class="logo">
     <h1>LAGBSR1</h1>
     <p>En route pour le Nomad Raid 2026 !</p>
   </header>
 
+  <div class="slideshow-container">
+    <div class="slide"><img src="slide1.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="slide2.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="slide3.jpg" alt="Slide 3"></div>
+  </div>
+
   <nav>
     <a href="#about">Notre Équipe</a>
     <a href="#project">Le Projet</a>
+    <a href="#solidarity">Solidarité</a>
+    <a href="#needs">Nos Besoins</a>
     <a href="#don">Nous Soutenir</a>
     <a href="#gallery">Galerie</a>
     <a href="#sponsors">Sponsors</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <section id="about">
-    <h2>Qui sommes-nous ?</h2>
-    <div class="highlight-box">
-      <img src="photo-lagbsr1.jpg" alt="LAGBSR1 en action">
-      <div class="highlight-text">
-        <p>Nous sommes <strong>LAGBSR1</strong>, une équipe composée de deux passionnés d'automobile, de voyage et de solidarité. Notre but : participer au Nomad Raid 2026 avec notre Peugeot 205, et vivre une aventure humaine unique à travers le Maroc.</p>
-        <p>En plus du défi mécanique, nous embarquons avec nous des fournitures scolaires, des denrées alimentaires et des dons à destination des enfants marocains, en partenariat avec des associations solidaires.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="project">
-    <h2>Notre Projet</h2>
-    <p>Le Nomad Raid est un raid automobile humanitaire et responsable au Maroc. C'est un défi sportif, mais aussi une mission solidaire : apporter du matériel scolaire, soutenir des actions locales et vivre une aventure hors du commun.</p>
-  </section>
-
-  <section id="don">
-    <h2>Nous soutenir</h2>
-    <p>Pour mener à bien ce projet, nous avons besoin de vous ! Chaque don compte pour financer notre voiture, le matériel, l'essence et bien sûr les actions solidaires.</p>
-    <a class="btn" href="https://oasisridersnomadraid.wixsite.com/oasisriders-nomadrai" target="_blank">Faire un don</a>
-  </section>
-
-  <section id="gallery">
-    <h2>Galerie photo</h2>
-    <div class="gallery">
-      <img src="photo1.jpg" alt="Préparation du véhicule">
-      <img src="photo2.jpg" alt="Notre équipe">
-      <img src="photo3.jpg" alt="Entraînement tout-terrain">
     </div>
   </section>
 
