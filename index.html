@@ -1,173 +1,217 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LAGBSR1 - Nomad Raid 2026</title>
-  <meta name="description" content="Rejoignez LAGBSR1 pour le Nomad Raid 2026 : une aventure solidaire à travers le Maroc à bord d'une Peugeot 205. Aidez-nous à apporter des dons aux enfants du Maroc.">
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
-  <style>
+!DOCTYPE html
+html lang=fr
+head
+  meta charset=UTF-8
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleLAGBSR1 - Nomad Raid 2026title
+  meta name=description content=Rejoignez LAGBSR1 pour le Nomad Raid 2026  une aventure solidaire à travers le Maroc à bord d'une Peugeot 205. Aidez-nous à apporter des dons aux enfants du Maroc.
+  link rel=stylesheet href=styles.min.css
+  script src=scripts.min.js deferscript
+  style
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      margin 0;
+      font-family Arial, sans-serif;
+      background #fff8e1;
+      color #3e2723;
     }
     header {
-      background-color: #0073e6;
-      color: white;
-      padding: 4rem;
-      text-align: center;
+      background #ff8f00;
+      color white;
+      padding 2rem;
+      text-align center;
+      position relative;
     }
-    header img {
-      width: 120px;
+    header img.logo {
+      position absolute;
+      top 20px;
+      left 20px;
+      height 60px;
     }
     nav {
-      background: #004080;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+      background #ffe0b2;
+      padding 1rem;
+      text-align center;
+      position sticky;
+      top 0;
+      z-index 100;
     }
     nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
+      margin 0 1rem;
+      text-decoration none;
+      color #bf360c;
+      font-weight bold;
     }
     section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
+      padding 2rem;
+      max-width 1000px;
+      margin auto;
     }
     .btn {
-      background-color: #ff6f00;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
+      background-color #e65100;
+      color white;
+      padding 0.8rem 1.2rem;
+      border none;
+      border-radius 5px;
+      text-decoration none;
+      display inline-block;
+      margin-top 1rem;
     }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+    .slideshow-container {
+      position relative;
+      max-width 100%;
+      margin auto;
+      overflow hidden;
     }
-    .interactive-images {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      margin-top: 2rem;
+    .slide {
+      display none;
+      width 100%;
     }
-    .interactive-images img {
-      width: 45%;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-    }
-    .interactive-images img:hover {
-      transform: scale(1.1);
-    }
-    .sponsor-benefits {
-      background-color: #e1f5fe;
-      padding: 2rem;
-      margin: 2rem 0;
+    .slide img {
+      width 100%;
+      height auto;
     }
     iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 1rem;
+      width 100%;
+      height 300px;
+      border none;
+      border-radius 10px;
+      margin-top 1rem;
     }
-    .cta {
-      background-color: #ff6f00;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin: 3rem 0;
+    footer {
+      background-color #3e2723;
+      color white;
+      text-align center;
+      padding 1rem;
+      margin-top 2rem;
     }
-  </style>
-</head>
-<body>
+    .sponsor-benefits {
+      background-color #3b5998;
+      color white;
+      padding 2rem;
+    }
+    .sponsor-benefits h2, .sponsor-benefits h3 {
+      color white;
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+      padding 10px;
+      margin-bottom 1rem;
+      width 100%;
+      max-width 600px;
+      display block;
+    }
+    .contact-form button {
+      background-color #ff6f00;
+      color white;
+      cursor pointer;
+    }
+  style
+head
+body
+  header
+    img src=logo-nomad-raid.png alt=Logo Nomad Raid class=logo
+    h1LAGBSR1h1
+    pEn route pour le Nomad Raid 2026 !p
+  header
 
-  <!-- Header -->
-  <header>
-    <img src="logo-nomad-raid.png" alt="Logo Nomad Raid">
-    <h1>LAGBSR1 - Nomad Raid 2026</h1>
-    <p>Ensemble, apportons un soutien humanitaire au Maroc !</p>
-  </header>
+  div class=slideshow-container
+    div class=slideimg src=slide1.jpg alt=Slide 1 loading=lazydiv
+    div class=slideimg src=slide2.jpg alt=Slide 2 loading=lazydiv
+    div class=slideimg src=slide3.jpg alt=Slide 3 loading=lazydiv
+  div
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">Notre Équipe</a>
-    <a href="#project">Le Projet</a>
-    <a href="#solidarity">Solidarité</a>
-    <a href="#needs">Besoins</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#don">Faire un Don</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  nav
+    a href=#aboutNotre Équipea
+    a href=#projectProjeta
+    a href=#solidaritySolidaritéa
+    a href=#needsBesoinsa
+    a href=#sponsorsSponsorsa
+    a href=#donDona
+    a href=#contactContacta
+  nav
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>Qui sommes-nous ?</h2>
-    <p>Nous sommes **Loup** et **Alexandre**, deux amis d'enfance de **Seine-et-Marne**, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous participerons au **Nomad Raid** à destination du Maroc à bord d’une **Peugeot 205**. Notre objectif ? Apporter des **dons humanitaires** aux enfants du Maroc. Ce projet allie **aventure** et **solidarité** !</p>
+  section id=raid-info style=background-color #ffcc80; padding 2rem; text-align center;
+    h2Qu'est-ce que le Nomad Raid h2
+    pLe strongNomad Raidstrong est un raid automobile solidaire qui se déroule chaque année dans le désert marocain. Le but  traverser le pays en véhicule tout en apportant des dons matériels aux populations locales. Ce n’est pas une course de vitesse, mais un défi sportif et humanitaire. Grâce à votre soutien, nous allons récolter des vélos, du matériel scolaire, des vêtements et bien plus pour les enfants et les familles marocaines.p
+  section
 
-    <div class="interactive-images">
-      <img src="image1.jpg" alt="Préparation du véhicule" onclick="window.location.href='https://www.leetchi.com/fr/c/lagbsr1-nomadraid'">
-      <img src="image2.jpg" alt="Solidarité sur place" onclick="window.location.href='https://www.leetchi.com/fr/c/lagbsr1-nomadraid'">
-    </div>
-  </section>
+  section id=about style=background-color #ff7043; color white; padding 2rem; text-align center;
+    h2Deux copains, une 205 et du sableh2
+    h3Oasis Ridersh3
+    pNous sommes Loup et Alexandre, deux amis d'enfance de Seine-et-Marne, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous réaliserons un rêve en participant au Nomad Raid à destination du Maroc à bord d’une Peugeot 205. Notre équipage, Oasis Riders, combine exploration et engagement solidaire.p
+    div style=display flex; gap 2rem; justify-content center;
+      img src=LAGBSR1-image1.jpg alt=Mécanique et préparation style=max-width 45%; border-radius 10px; loading=lazy
+      img src=LAGBSR1-image2.jpg alt=Véhicules et enfants style=max-width 45%; border-radius 10px; loading=lazy
+    div
+    div style=text-align center; margin-top 2rem;
+      a class=btn href=httpswww.leetchi.comfrclagbsr1-nomadraid target=_blankFaire un don sur leetchia
+      a class=btn href=#sponsors style=margin-left 1rem;Devenir sponsora
+    div
+  section
 
-  <!-- Project Section -->
-  <section id="project">
-    <h2>Le Projet</h2>
-    <p>Le **Nomad Raid 2026** est une aventure solidaire qui combine défi automobile et engagement humanitaire. Nous allons traverser le **désert marocain** pour apporter des **vêtements**, des **vélos**, des **jouets** et des **fournitures médicales** aux populations locales. Notre objectif est d’améliorer le quotidien des enfants et des communautés du sud du Maroc grâce à vos dons.</p>
-  </section>
+  section id=needs
+    h2Nos besoinsh2
+    h3Budget estimé  8240 €h3
+    ul
+      liInscription  3240 €li
+      liAssurance maladie et rapatriement  40 €li
+      liHébergements  750 €li
+      liRepas  120 €li
+      liMatériel de bivouac  500 €li
+      liPéages  250 €li
+      liCarburant  750 €li
+      liAchat véhicule  2300 €li
+      liAssurance véhicule  480 €li
+      liMécanique, réparations  1500 €li
+      liMarge supplémentaire  1000 €li
+    ul
+    img src=camembert-budget.png alt=Camembert Budget loading=lazy
+  section
 
-  <!-- Solidarity Section -->
-  <section id="solidarity">
-    <h2>Nos Actions Solidaires</h2>
-    <ul>
-      <li><strong>Vélos :</strong> Distribution de vélos réparés aux enfants marocains 🚲</li>
-      <li><strong>Matériel scolaire :</strong> Dons de fournitures pour les écoles 📚</li>
-      <li><strong>Vêtements et jouets :</strong> Distribution aux enfants 👕🧸</li>
-      <li><strong>Matériel médical :</strong> Fournitures de soins pour les communautés locales 💉</li>
-    </ul>
-  </section>
+  section id=sponsors class=sponsor-benefits
+    h2Avantages pour les sponsorsh2
+    div class=sponsor-benefits-content
+      img src=sponsors-avantages.jpg alt=Tournage loading=lazy
+      div
+        h3Médiatisationh3
+        ul
+          liPhotosvidéos proli
+          liSalle de presse + réseaux sociauxli
+          lia href=httpswww.nomadraid.fr target=_blank style=color#ffcc80;www.nomadraid.frali
+        ul
+        h3Visibilité pendant l’événementh3
+        ul
+          liLogo sur véhiculeli
+          liRéseaux sociaux + médiasli
+        ul
+        h3Image & Valeursh3
+        pEngagement solidaire valorisép
+      div
+    div
+  section
 
-  <!-- Needs Section -->
-  <section id="needs">
-    <h2>Nos Besoins</h2>
-    <h3>Budget estimé : 8240 €</h3>
-    <ul>
-      <li>Inscription : 3240 €</li>
-      <li>Assurance maladie et rapatriement : 40 €</li>
-      <li>Hébergements : 750 €</li>
-      <li>Repas : 120 €</li>
-      <li>Matériel de bivouac : 500 €</li>
-      <li>Péages : 250 €</li>
-      <li>Carburant : 750 €</li>
-      <li>Achat véhicule : 2300 €</li>
-      <li>Assurance véhicule : 480 €</li>
-      <li>Mécanique, réparations : 1500 €</li>
-      <li>Marge supplémentaire : 1000 €</li>
-    </ul>
-    <h3>Matériel à collecter</h3>
-    <ul>
-      <li>Vélos 🚲</li>
-      <li>Vêtements 👕</li>
-      <li>Jouets 🧸</li>
-      <li>Matériel médical 💉</li>
-      <li>Matériel d’hygiène 🧴</li>
-    </ul>
-  </section>
+  section id=don
+    h2Faire un donh2
+    pTout soutien, financier ou matériel, a un impact fort. Merci 💛p
+    a class=btn href=httpswww.leetchi.comfrclagbsr1-nomadraid target=_blank Faire un don via Leetchi a
+  section
 
-  <!-- Sponsors Section -->
-  <section id="sponsors" class="sponsor-benefits">
-    <h2>Avantages
+  section id=contact
+    h2Contacth2
+    pBesoin d'infos  Écrivez-nous p
+    form action=mailtolagbsr1.nomad@gmail.com method=post enctype=textplain class=contact-form
+      input type=text name=Prénom placeholder=Prénom required
+      input type=text name=Nom placeholder=Nom required
+      input type=email name=Email placeholder=Email required
+      textarea name=Message rows=4 placeholder=Votre message... requiredtextarea
+      button type=submit class=btnEnvoyerbutton
+    form
+    iframe src=httpswww.google.commapsq=CESI+Angoulême&output=embediframe
+  section
+
+  footer
+    p&copy; 2025 LAGBSR1  Nomad Raidp
+  footer
+
+  p style=text-aligncenter; font-styleitalic;Version alternative  formulaire connecté à Google Sheet possible.p
+body
+html
