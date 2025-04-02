@@ -29,6 +29,8 @@
       position: absolute;
       inset: 0;
       z-index: 0;
+      filter: blur(2px);
+      transform: scale(1.05); /* pour compenser le blur */
     }
 
     .hero-content {
@@ -36,7 +38,7 @@
       z-index: 1;
       color: white;
       text-align: center;
-      top: 30%;
+      top: 20%;
       padding: 0 2rem;
       text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
     }
@@ -76,23 +78,9 @@
       <p>15 au 26 février 2026</p>
     </div>
 
-  <!-- Bandeau orange en bas -->
-  <div style="
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #F37021;
-    color: white;
-    padding: 1.2rem 2rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-    text-align: center;
-    letter-spacing: 1px;
-  ">
-    LE RAID-AVENTURE DE l'AGBSR 1 AU MAROC !
-  </div>
-</section>
+    <div class="hero-banner">
+      LE RAID-AVENTURE DES PEUGEOT 205 AU MAROC !
+   <body>
   <header>
     <h1>LAGBSR1 - Nomad'Raid 2026</h1>
     <p>Solidarité, aventure et entraide à travers le Maroc</p>
