@@ -4,115 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LAGBSR1 - Nomad'Raid</title>
-  <meta name="description" content="LAGBSR1 participe au Nomad'Raid : une aventure solidaire à bord d'une Peugeot 205 à travers le Maroc, au profit des enfants et des communautés locales." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('fond.jpg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
       color: #333;
     }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: -1;
-    }
     header {
-      background: #8B4513;
+      background: url('banniere.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 6rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
     nav {
-      background: #A0522D;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background-color: #222;
+      padding: 1rem 0;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
     }
     nav a:hover {
-      color: #FFD700;
+      color: #ffcc00;
     }
     section {
-      padding: 2rem;
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
     }
     h2 {
-      color: #e65100;
-      text-align: center;
+      color: #d35400;
       margin-bottom: 1rem;
     }
-    .btn {
-      display: inline-block;
-      background: #ff6f00;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 1rem;
-    }
     .gallery {
-      overflow: hidden;
-      position: relative;
-      height: 220px;
-    }
-    .gallery-track {
       display: flex;
-      gap: 1em;
-      width: fit-content;
-      min-width: 100%;
-      animation: scroll 20s linear infinite;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
     }
     .gallery img {
-      flex-shrink: 0;
       width: 300px;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    .sponsor {
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+    .sponsor img {
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
     }
     .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
+    .contact-form textarea {
+      padding: 1rem;
       border-radius: 8px;
+      border: 1px solid #ccc;
     }
     .contact-form button {
-      background-color: #ff7000;
+      background-color: #e67e22;
       color: white;
-      font-weight: bold;
       border: none;
+      padding: 1rem;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 1rem;
     }
     footer {
-      background: #8B4513;
+      background-color: #222;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -126,33 +104,76 @@
 </head>
 <body>
   <header>
-    <h1>LAGBSR1 - Nomad'Raid</h1>
-    <p>Solidarité, Aventure, Écoresponsabilité</p>
+    <h1>LAGBSR1 - Nomad'Raid 2026</h1>
+    <p>Solidarité, aventure et entraide à travers le Maroc</p>
   </header>
 
   <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#projet">Projet</a>
-    <a href="#equipe">Équipe</a>
+    <a href="#projet">Notre projet</a>
     <a href="#galerie">Galerie</a>
     <a href="#sponsors">Sponsors</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <a href="#cagnotte">Cagnotte</a>
-    <a href="#localisation">Localisation</a>
   </nav>
 
   <section id="projet">
-    <h2>Notre Aventure Nomad'Raid</h2>
-    <p>Le <strong>Nomad Raid</strong> est bien plus qu’un simple rallye automobile. Du <strong>8 au 19 février 2026</strong>, notre équipage parcourra <strong>4000 kilomètres</strong> à travers le <strong>Maroc</strong>, à bord de la mythique Peugeot 205. Des montagnes de l’Atlas jusqu’aux dunes du Sahara, ce défi allie passion, dépassement de soi et engagement solidaire.</p>
-    <p>Organisé par <strong>AventuRaid</strong>, cet événement met en lumière les valeurs de <strong>partage, d’humanité et d’entraide</strong>. Tout au long du raid, nous mènerons plusieurs actions humanitaires concrètes :</p>
-    <ul>
-      <li>📦 Collecte de <strong>10 kg</strong> de denrées alimentaires et produits d’hygiène pour les <strong>Restos du Cœur</strong></li>
-      <li>🎒 Don de <strong>20 kg</strong> de matériel solidaire : fournitures scolaires, jouets, vêtements chauds</li>
-      <li>🚲 Livraison de <strong>2 vélos</strong> pour aider des enfants marocains à se rendre à l’école</li>
-    </ul>
-    <p>En nous soutenant, vous participez à une aventure humaine forte de sens, tournée vers l’entraide et la solidarité internationale.</p>
+    <h2>Notre Projet</h2>
+    <p>Le Nomad Raid est une aventure humaine et solidaire à travers le Maroc, dédiée à la mythique Peugeot 205. Du 8 au 19 février 2026, notre équipage parcourra 4000 km entre montagnes, désert et villages, en apportant du matériel scolaire, médical et deux vélos pour les enfants marocains. En soutenant notre aventure, vous devenez acteur d’un projet riche de sens et d’humanité.</p>
+    <p>Chaque kilomètre parcouru sera l’occasion de créer du lien, de partager des valeurs et de sensibiliser à la solidarité internationale. Nous porterons également un message écologique, en veillant à limiter notre impact environnemental tout au long du raid.</p>
+    <p>Nous avons prévu des étapes dans des villages partenaires où seront remis les dons et organisées des actions de sensibilisation auprès des enfants. Grâce à nos sponsors et à vos dons, nous allons pouvoir financer le véhicule, l'équipement, l'inscription, les dons, et bien plus encore.</p>
   </section>
 
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="205-desert.jpg" alt="Peugeot 205 dans le désert">
+      <img src="enfants.jpg" alt="Distribution de matériel solidaire">
+      <img src="equipage.jpg" alt="Notre équipage">
+      <img src="atlas.jpg" alt="Paysages de l'Atlas">
+      <img src="campement.jpg" alt="Campement dans le désert">
+    </div>
+  </section>
+
+  <section id="sponsors">
+    <h2>Nos Sponsors</h2>
+    <div class="sponsor">
+      <img src="cesi-logo.png" alt="Logo CESI">
+      <p>Merci au CESI pour leur soutien dans cette aventure.</p>
+    </div>
+    <div class="sponsor">
+      <img src="logo-canaelec.jpg" alt="Logo Canaelec">
+      <p>Merci à Canaelec pour leur engagement à nos côtés.</p>
+    </div>
+    <div class="sponsor">
+      <img src="logo-euclide-solution.jpg" alt="Logo Euclide Solution">
+      <p>Merci à Euclide Solution pour leur accompagnement.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p><strong>Pourquoi avoir choisi la Peugeot 205 ?</strong><br>Parce qu’elle est robuste, simple à entretenir, légère, et parfaitement adaptée aux pistes marocaines. Elle est aussi un symbole du rallye populaire.</p>
+    <p><strong>Comment se répartit le budget ?</strong><br>Le budget est divisé entre l’achat du véhicule, l’équipement mécanique, l’essence, l’assurance, l’inscription au raid, l’hébergement et les dons humanitaires.</p>
+    <p><strong>Puis-je vous aider autrement qu’en donnant ?</strong><br>Oui ! Partager notre projet, relayer nos publications ou nous aider à trouver des sponsors est tout aussi utile 💛</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" class="contact-form">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <p>Ou contactez-nous par email : <strong>lagbsr1.nomad@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LAGBSR1 - Nomad'Raid. Tous droits réservés.</p>
+    <p>Suivez-nous sur Instagram</p>
+    <a href="https://www.instagram.com/lagbsr2nomadraid/?utm_source=ig_web_button_share_sheet" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+    </a>
+  </footer>
 </body>
 </html>
