@@ -1,177 +1,250 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LAGBSR1 – Nomad Raid 2026</title>
-    <style>
-      :root {
-        --orange: #ff8f00;
-        --light-bg: #fff8e1;
-        --text-dark: #3e2723;
-        --accent: #e65100;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'AGBSR2 - Nomad'Raid</title>
+  <meta name="description" content="L'AGBSR2 participe au Nomad'Raid, un raid humanitaire et solidaire à travers le désert marocain. Découvrez notre projet, notre équipe, nos sponsors et soutenez notre mission.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('fond.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+    header {
+      background: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    nav {
+      background: #A0522D;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #e65100;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #ff6f00;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .gallery {
+      overflow: hidden;
+      position: relative;
+      height: 220px;
+    }
+    .gallery-track {
+      display: flex;
+      gap: 1em;
+      width: fit-content;
+      min-width: 100%;
+      animation: scroll 20s linear infinite;
+    }
+    .gallery img {
+      flex-shrink: 0;
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .contact-form button {
+      background-color: #ff7000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer img {
+      width: 40px;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>L'AGBSR2 - Nomad'Raid</h1>
+    <p>Solidarité, Aventure, Écoresponsabilité</p>
+  </header>
 
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: var(--light-bg);
-        color: var(--text-dark);
-        line-height: 1.6;
-      }
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#projet">Projet</a>
+    <a href="#equipe">Équipe</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#sponsors">Sponsors</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#cagnotte">Cagnotte</a>
+    <a href="#localisation">Localisation</a>
+  </nav>
 
-      header {
-        padding: 2rem 1rem;
-        background: var(--orange);
-        color: white;
-        text-align: center;
-      }
+  <section id="accueil">
+    <h2>Bienvenue</h2>
+    <p>Notre association participe au Nomad'Raid, un raid humanitaire et solidaire. Découvrez notre projet et rejoignez-nous dans cette aventure hors du commun !</p>
+  </section>
 
-      nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        background: #ffe0b2;
-        padding: 1rem;
-        gap: 1rem;
-      }
+  <section id="projet">
+    <h2>Notre Projet</h2>
+    <p>L'objectif est de distribuer du matériel scolaire, sportif et médical à travers un parcours de plusieurs milliers de kilomètres en Peugeot 205. Nous visons à sensibiliser à la solidarité internationale tout en vivant une expérience unique.</p>
+  </section>
 
-      nav a {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: bold;
-      }
+  <section id="equipe">
+    <h2>Notre Équipe</h2>
+    <ul>
+      <li><strong>Clément LEFEBVRE</strong> - Président</li>
+      <li><strong>Elouan CORLOUER</strong> - Trésorier</li>
+    </ul>
+  </section>
 
-      section {
-        padding: 4rem 1rem;
-        max-width: 900px;
-        margin: auto;
-      }
-
-      h2 {
-        color: var(--accent);
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .btn {
-        display: inline-block;
-        background: var(--accent);
-        color: white;
-        padding: 0.75rem 1.5rem;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        margin-top: 1rem;
-      }
-
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .gallery img {
-        width: 100%;
-        border-radius: 12px;
-      }
-
-      .slide figcaption {
-        text-align: center;
-        font-style: italic;
-        margin-top: 0.5rem;
-        color: #5d4037;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 1rem;
-      }
-
-      .contact-form button {
-        width: 100%;
-        background: var(--accent);
-        color: white;
-        border: none;
-        padding: 1rem;
-        border-radius: 8px;
-        font-size: 1rem;
-        cursor: pointer;
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background: var(--text-dark);
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>LAGBSR1 – Nomad Raid 2026</h1>
-      <p>Une aventure humaine et solidaire à travers le désert marocain</p>
-    </header>
-
-    <nav>
-      <a href="#about">Notre équipe</a>
-      <a href="#solidarity">Solidarité</a>
-      <a href="#needs">Besoins</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about">
-      <h2>Notre Équipe</h2>
-      <p>
-        Nous sommes Loup et Alexandre, deux amis passionnés par l’automobile, les défis
-        humains et la solidarité. En 2026, nous participons au Nomad Raid à bord de notre
-        fidèle Peugeot 205 pour apporter notre aide aux enfants du désert marocain.
-      </p>
-      <div class="gallery">
-        <img src="LAGBSR1-image1.jpg" alt="Préparation de la Peugeot 205" />
-        <img src="LAGBSR1-image2.jpg" alt="Enfants recevant les dons" />
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <div class="gallery-track">
+        <img src="205-desert.jpg" alt="Peugeot 205 dans le désert">
+        <img src="205-rallye.jpg" alt="Peugeot 205 rallye">
+        <img src="205-turbo.jpg" alt="Peugeot 205 turbo">
+        <img src="enfant.jpg" alt="Enfants marocain">
+        <img src="205-desert.jpg" alt="Peugeot 205 dans le désert">
+        <img src="205-rallye.jpg" alt="Peugeot 205 rallye">
+        <img src="205-turbo.jpg" alt="Peugeot 205 turbo">
+        <img src="enfant.jpg" alt="Enfants marocain">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="solidarity">
-      <h2>Notre mission solidaire</h2>
-      <p>
-        Grâce à vos dons, nous acheminerons 20 kg de matériel humanitaire : fournitures
-        scolaires, vêtements chauds, jouets et produits d'hygiène. Chaque équipage fournit aussi
-        un vélo pour faciliter la scolarisation des enfants dans les zones rurales marocaines.
-      </p>
-    </section>
+  <section id="sponsors">
+    <h2>Nos Sponsors</h2>
+    <div class="sponsor">
+      <img src="cesi-logo.png" alt="CESI logo" class="sponsor-logo">
+      <p>CESI nous soutient financièrement dans notre aventure, et nous les remercions pour leur engagement dans ce projet solidaire.</p>
+    </div>
+    <div class="sponsor">
+      <img src="logo-canaelec.jpg" alt="Canaelec logo" class="sponsor-logo">
+      <p>Canaelec nous aide financièrement à faire avancer notre projet et à atteindre nos objectifs humanitaires.</p>
+    </div>
+    <div class="sponsor">
+      <img src="logo-euclide-solution.jpg" alt="Euclide Solution logo" class="sponsor-logo">
+      <p>Euclide Solution nous accompagne financièrement dans cette belle aventure, et nous les remercions pour leur soutien précieux.</p>
+    </div>
+  </section>
 
-    <section id="needs">
-      <h2>Nos besoins</h2>
-      <ul>
-        <li>Budget total estimé : <strong>8240 €</strong></li>
-        <li>Achat véhicule : 2300 €</li>
-        <li>Inscription au raid : 3240 €</li>
-        <li>Frais mécaniques & carburant : 2250 €</li>
-        <li>Matériel humanitaire & logistique : 450 €</li>
-      </ul>
-      <a class="btn" href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank">Faire un don</a>
-    </section>
+  <section id="faq">
+    <h2>Questions Fréquemment Posées</h2>
+    <div class="faq-item">
+      <h3>Comment le Nomad'Raid aide-t-il les communautés locales ?</h3>
+      <p>Le Nomad'Raid distribue du matériel scolaire, médical et sportif dans des zones reculées, tout en sensibilisant les populations locales à des enjeux environnementaux et sociaux.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Comment puis-je participer au projet ?</h3>
+      <p>Vous pouvez vous inscrire en tant que participant ou faire un don sur notre plateforme de cagnotte en ligne.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Quel type de matériel est distribué pendant le raid ?</h3>
+      <p>Le matériel distribué inclut des fournitures scolaires, des équipements sportifs et du matériel médical pour les zones les plus isolées.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Comment mon entreprise peut-elle devenir partenaire ou sponsor ?</h3>
+      <p>Nous avons plusieurs options de partenariat, incluant la visibilité sur nos véhicules et notre matériel. Contactez-nous pour plus de détails.</p>
+    </div>
+    <form action="mailto:agbsr2@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <input type="text" name="Nom" placeholder="Nom" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Question" rows="4" placeholder="Votre question..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
 
-    <section id="contact">
-      <h2>Nous contacter</h2>
-      <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain" class="contact-form">
-        <input type="text" name="Prénom" placeholder="Votre prénom" required />
-        <input type="text" name="Nom" placeholder="Votre nom" required />
-        <input type="email" name="Email" placeholder="Votre email" required />
-        <textarea name="Message" rows="4" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email : agbsr2@gmail.com</p>
+    <p>Adresse : 4 Rue Camille Claudel, 16400 La Couronne</p>
+  </section>
 
-    <footer>
-      <p>&copy; 2025 LAGBSR1 – Nomad Raid</p>
-    </footer>
-  </body>
+  <section id="cagnotte">
+    <h2>Soutenir notre aventure</h2>
+    <p>Scannez ce QR code ou cliquez sur le bouton ci-dessous pour accéder à notre cagnotte Leetchi :</p>
+    <img src="qr-leetchi.png" alt="QR Code Leetchi">
+    <br>
+    <a href="https://www.leetchi.com/fr/c/dons-pour-le-nomadraid-2026-1803729" target="_blank" class="btn">💰 Contribuer à la cagnotte</a>
+  </section>
+
+  <section id="localisation">
+    <h2>Où nous trouver ?</h2>
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=CESI+Angoulême&output=embed" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 L'AGBSR2 - Nomad'Raid. Tous droits réservés.</p>
+    <h2>Suivez-nous</h2>
+    <a href="https://www.instagram.com/lagbsr2nomadraid/?utm_source=ig_web_button_share_sheet" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+    </a>
+  </footer>
+</body>
 </html>
