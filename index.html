@@ -6,6 +6,9 @@
   <title>LAGBSR1 - Nomad'Raid</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -29,6 +32,9 @@
       gap: 2rem;
       background-color: #222;
       padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
     nav a {
       color: white;
@@ -58,6 +64,10 @@
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     .sponsor {
       text-align: center;
@@ -94,11 +104,53 @@
       color: white;
       text-align: center;
       padding: 2rem 1rem;
+      position: relative;
     }
     footer img {
       width: 40px;
       border-radius: 50%;
       margin-top: 1rem;
+    }
+    .timeline ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .timeline li {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 4px solid #e67e22;
+    }
+    .testimonials blockquote {
+      font-style: italic;
+      margin: 1rem 0;
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+    }
+    .budget-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .budget-table th, .budget-table td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .budget-table th {
+      background-color: #eee;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #e67e22;
+      color: white;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: none;
     }
   </style>
 </head>
@@ -113,14 +165,15 @@
     <a href="#galerie">Galerie</a>
     <a href="#sponsors">Sponsors</a>
     <a href="#faq">FAQ</a>
+    <a href="#timeline">Itinéraire</a>
+    <a href="#budget">Budget</a>
+    <a href="#temoignages">Témoignages</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="projet">
     <h2>Notre Projet</h2>
-    <p>Le Nomad Raid est une aventure humaine et solidaire à travers le Maroc, dédiée à la mythique Peugeot 205. Du 8 au 19 février 2026, notre équipage parcourra 4000 km entre montagnes, désert et villages, en apportant du matériel scolaire, médical et deux vélos pour les enfants marocains. En soutenant notre aventure, vous devenez acteur d’un projet riche de sens et d’humanité.</p>
-    <p>Chaque kilomètre parcouru sera l’occasion de créer du lien, de partager des valeurs et de sensibiliser à la solidarité internationale. Nous porterons également un message écologique, en veillant à limiter notre impact environnemental tout au long du raid.</p>
-    <p>Nous avons prévu des étapes dans des villages partenaires où seront remis les dons et organisées des actions de sensibilisation auprès des enfants. Grâce à nos sponsors et à vos dons, nous allons pouvoir financer le véhicule, l'équipement, l'inscription, les dons, et bien plus encore.</p>
+    <p>Le Nomad Raid est une aventure humaine et solidaire à travers le Maroc. Du 8 au 19 février 2026, notre équipage parcourra 4000 km à bord d’une Peugeot 205, pour distribuer du matériel solidaire aux enfants marocains. Chaque don nous permet de nous rapprocher un peu plus de cet objectif.</p>
   </section>
 
   <section id="galerie">
@@ -129,8 +182,6 @@
       <img src="205-desert.jpg" alt="Peugeot 205 dans le désert">
       <img src="enfants.jpg" alt="Distribution de matériel solidaire">
       <img src="equipage.jpg" alt="Notre équipage">
-      <img src="atlas.jpg" alt="Paysages de l'Atlas">
-      <img src="campement.jpg" alt="Campement dans le désert">
     </div>
   </section>
 
@@ -140,21 +191,48 @@
       <img src="cesi-logo.png" alt="Logo CESI">
       <p>Merci au CESI pour leur soutien dans cette aventure.</p>
     </div>
-    <div class="sponsor">
-      <img src="logo-canaelec.jpg" alt="Logo Canaelec">
-      <p>Merci à Canaelec pour leur engagement à nos côtés.</p>
-    </div>
-    <div class="sponsor">
-      <img src="logo-euclide-solution.jpg" alt="Logo Euclide Solution">
-      <p>Merci à Euclide Solution pour leur accompagnement.</p>
-    </div>
   </section>
 
   <section id="faq">
     <h2>FAQ</h2>
-    <p><strong>Pourquoi avoir choisi la Peugeot 205 ?</strong><br>Parce qu’elle est robuste, simple à entretenir, légère, et parfaitement adaptée aux pistes marocaines. Elle est aussi un symbole du rallye populaire.</p>
-    <p><strong>Comment se répartit le budget ?</strong><br>Le budget est divisé entre l’achat du véhicule, l’équipement mécanique, l’essence, l’assurance, l’inscription au raid, l’hébergement et les dons humanitaires.</p>
-    <p><strong>Puis-je vous aider autrement qu’en donnant ?</strong><br>Oui ! Partager notre projet, relayer nos publications ou nous aider à trouver des sponsors est tout aussi utile 💛</p>
+    <p><strong>Pourquoi une cagnotte ?</strong><br>Parce que pour réaliser cette aventure solidaire, nous avons besoin d’un coup de pouce ! Les frais sont nombreux, et chaque euro nous aide à avancer.</p>
+  </section>
+
+  <section id="timeline" class="timeline">
+    <h2>Notre Itinéraire</h2>
+    <ul>
+      <li><strong>8 février :</strong> Départ de France</li>
+      <li><strong>12 février :</strong> Arrivée au Maroc</li>
+      <li><strong>14 février :</strong> Premiers villages solidaires</li>
+      <li><strong>17 février :</strong> Traversée du désert</li>
+      <li><strong>19 février :</strong> Clôture du raid</li>
+    </ul>
+  </section>
+
+  <section id="budget">
+    <h2>Budget Prévisionnel</h2>
+    <p>Voici un aperçu de notre budget. C’est grâce à votre soutien que cette aventure devient possible !</p>
+    <table class="budget-table">
+      <thead>
+        <tr><th>Dépense</th><th>Montant</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Achat de la voiture</td><td>2 500 €</td></tr>
+        <tr><td>Préparation mécanique</td><td>1 000 €</td></tr>
+        <tr><td>Inscription au raid</td><td>1 800 €</td></tr>
+        <tr><td>Carburant</td><td>1 200 €</td></tr>
+        <tr><td>Matériel solidaire (fournitures, vélos...)</td><td>500 €</td></tr>
+      </tbody>
+    </table>
+    <p style="text-align: center; margin-top: 2rem;">
+      <a href="https://www.leetchi.com/fr/c/nomad-raid-2026-5151434" target="_blank" style="background: #e67e22; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 10px;">💰 Contribuer à la cagnotte</a>
+    </p>
+  </section>
+
+  <section id="temoignages" class="testimonials">
+    <h2>Ils en parlent...</h2>
+    <blockquote>“Un projet qui redonne foi en l’humanité !” - Jean, sponsor</blockquote>
+    <blockquote>“Le sourire des enfants vaut tous les kilomètres parcourus.” - Loup, équipier</blockquote>
   </section>
 
   <section id="contact">
@@ -165,7 +243,6 @@
       <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
-    <p>Ou contactez-nous par email : <strong>lagbsr1.nomad@gmail.com</strong></p>
   </section>
 
   <footer>
@@ -175,5 +252,13 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
     </a>
   </footer>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⬆</button>
+  <script>
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>
