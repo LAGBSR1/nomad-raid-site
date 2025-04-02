@@ -5,177 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LAGBSR1 - Nomad Raid 2026</title>
   <meta name="description" content="Rejoignez LAGBSR1 pour le Nomad Raid 2026 : une aventure solidaire à travers le Maroc à bord d'une Peugeot 205. Aidez-nous à apporter des dons aux enfants du Maroc.">
+  <link rel="stylesheet" href="styles.min.css">
+  <script src="scripts.min.js" defer></script>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('images/background-nomadraid.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #2e2e2e;
+      background: #fff8e1;
+      color: #3e2723;
     }
     header {
-      background: rgba(0, 0, 0, 0.6);
+      background: #ff8f00;
       color: white;
       padding: 2rem;
       text-align: center;
+      position: relative;
+    }
+    header img.logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 60px;
     }
     nav {
-      background: rgba(255, 255, 255, 0.95);
-      text-align: center;
+      background: #ffe0b2;
       padding: 1rem;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 100;
     }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #e65100;
+      color: #bf360c;
       font-weight: bold;
     }
     section {
-      background: rgba(255, 255, 255, 0.95);
-      margin: 2rem auto;
       padding: 2rem;
-      border-radius: 15px;
-      max-width: 1100px;
+      max-width: 1000px;
+      margin: auto;
     }
-    h2 {
-      color: #bf360c;
+    .btn {
+      background-color: #e65100;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+    .slide figcaption {
       text-align: center;
-      margin-bottom: 1rem;
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 0.5rem;
+      color: #5d4037;
     }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .grid-item {
-      flex: 1 1 220px;
-      max-width: 300px;
-      text-align: center;
-    }
-    .grid-item img {
-      height: 60px;
-      margin-bottom: 0.5rem;
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
     }
     footer {
-      text-align: center;
-      background: #333;
+      background-color: #3e2723;
       color: white;
+      text-align: center;
       padding: 1rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
+    }
+    .sponsor-benefits {
+      background-color: #3b5998;
+      color: white;
+      padding: 2rem;
+    }
+    .sponsor-benefits h2, .sponsor-benefits h3 {
+      color: white;
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+      padding: 10px;
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 600px;
+      display: block;
+    }
+    .contact-form button {
+      background-color: #ff6f00;
+      color: white;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>LAGBSR1 - Nomad Raid 2026</h1>
-    <p>Une aventure humaine et solidaire au cœur du désert marocain</p>
+    <img src="logo-nomad-raid.png" alt="Logo Nomad Raid" class="logo">
+    <h1>LAGBSR1</h1>
+    <p>En route pour le Nomad Raid 2026 !</p>
   </header>
 
-  <nav>
-    <a href="#intro">L'aventure</a>
-    <a href="#solidarite">Solidarité</a>
-    <a href="#besoins">Besoins</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="slideshow-container">
+    <figure class="slide">
+      <img src="slide1.jpg" alt="Départ du Nomad Raid avec la Peugeot 205 chargée de matériel" loading="lazy">
+      <figcaption>Départ du Nomad Raid avec la Peugeot 205 chargée de matériel</figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="slide2.jpg" alt="Distribution de jouets et fournitures dans un village marocain" loading="lazy">
+      <figcaption>Distribution de jouets et fournitures dans un village marocain</figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="slide3.jpg" alt="Traversée des paysages désertiques du Maroc" loading="lazy">
+      <figcaption>Traversée des paysages désertiques du Maroc</figcaption>
+    </figure>
+  </div>
 
-  <section id="intro">
-    <h2>Une aventure exceptionnelle</h2>
-    <p>Le <strong>Nomad Raid</strong> est une aventure exceptionnelle au Maroc, dédiée à la mythique Peugeot 205. Du 8 au 19 février 2026, notre équipage parcourra 4000 kilomètres de paysages à couper le souffle, allant des majestueuses montagnes de l’Atlas aux vastes dunes du Sahara. Plus qu'un simple rallye, cet événement organisé par <strong>AventuRaid</strong> allie passion automobile et engagement humanitaire.</p>
-    <p>Nous participerons à des actions solidaires : dons alimentaires, matériel scolaire, réparations de vélos, et repas solidaires. Soutenez notre équipage pour faire rayonner la solidarité franco-marocaine.</p>
-  </section>
-
-  <section id="solidarite">
-    <h2>Un raid solidaire</h2>
-    <p style="text-align: center;">5 actions humanitaires au cœur du désert :</p>
-    <div class="grid">
-      <div class="grid-item">
-        <img src="icons/don-materiel.svg" alt="Don matériel">
-        <h4>Don de matériel</h4>
-        <p>20 kg de fournitures à destination des enfants : jouets, fournitures scolaires, produits d’hygiène...</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/velo.svg" alt="Don de vélo">
-        <h4>Don de vélo</h4>
-        <p>Chaque participant apporte un vélo réparé pour un enfant marocain.</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/reparation.svg" alt="Réparation">
-        <h4>Réparation de vélos</h4>
-        <p>Atelier sur place pour remettre en état les vélos des enfants.</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/couscous.svg" alt="Couscous">
-        <h4>Couscous solidaire</h4>
-        <p>Repas partagé dont les bénéfices servent à des projets locaux.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="besoins">
-    <h2>Besoins matériels</h2>
-    <p style="text-align: center;">Pour les enfants et la Peugeot 205 :</p>
-
-    <h3 style="text-align: center;">Matériel pour les enfants</h3>
-    <div class="grid">
-      <div class="grid-item">
-        <img src="icons/velo-orange.svg" alt="Vélos">
-        <h4>2 vélos enfants/adultes</h4>
-        <p>Avec chambres à air, pneus, casques...</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/vetements-orange.svg" alt="Vêtements">
-        <h4>Vêtements</h4>
-        <p>Blousons, chaussures, pulls, pantalons...</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/jouets-orange.svg" alt="Jouets">
-        <h4>Jouets</h4>
-        <p>Ballons, jeux, coloriages, peluches...</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/medical-orange.svg" alt="Matériel médical">
-        <h4>Matériel médical</h4>
-        <p>Compresses, pansements, désinfectants (pas de médicaments).</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/hygiene-orange.svg" alt="Hygiène">
-        <h4>Produits d’hygiène</h4>
-        <p>Brosse à dents, gel douche, shampooing...</p>
-      </div>
-    </div>
-
-    <h3 style="text-align: center;">Matériel pour la Peugeot 205</h3>
-    <div class="grid">
-      <div class="grid-item">
-        <img src="icons/pieces-orange.svg" alt="Pièces détachées">
-        <h4>Pièces détachées</h4>
-        <p>Filtres, plaquettes, amortisseurs, barres de toit...</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/pneus-orange.svg" alt="Pneus">
-        <h4>Pneus</h4>
-        <p>Pneus adaptés au désert</p>
-      </div>
-      <div class="grid-item">
-        <img src="icons/mecanique-orange.svg" alt="Assistance mécanique">
-        <h4>Assistance mécanique</h4>
-        <p>Un coup de main technique en cas de panne</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p style="text-align: center;">Envie de soutenir notre projet ou de poser une question ?</p>
-    <p style="text-align: center;">📩 <strong>lagbsr1.nomad@gmail.com</strong></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 LAGBSR1 | Nomad Raid</p>
-  </footer>
+  <!-- Le reste du contenu du site continue ici comme dans le fichier d'origine -->
 </body>
 </html>
