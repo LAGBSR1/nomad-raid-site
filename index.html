@@ -115,52 +115,59 @@
   </style>
 </head>
 <body>
-<section style="
-  position: relative;
-  height: 90vh;
-  background: url('nomad-background.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-">
+<!-- BANDEAU NOMAD RAID STYLE -->
+<section style="position: relative; height: 85vh; overflow: hidden;">
 
-  <!-- FOND GRADIENT SOMBRE -->
+  <!-- Image de fond -->
   <div style="
+    background: url('bandeau-accueil.jpg') center/cover no-repeat;
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   "></div>
 
-  <!-- CONTENU TEXTE -->
-  <div style="z-index: 2; text-align: center; padding: 2rem;">
+  <!-- Contenu texte -->
+  <div style="
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 15%;
+  ">
     <h1 style="
       font-size: 4rem;
-      text-transform: uppercase;
       font-weight: 800;
-      letter-spacing: 3px;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.6);
       margin-bottom: 1rem;
     ">
-      Nomad'Raid 2026
+      6ᵉ ÉDITION
     </h1>
-
     <p style="
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-      font-style: italic;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
     ">
-      Une Peugeot 205, deux aventuriers, 4000 km de paysages magiques à travers le Maroc.
-      De l’Atlas aux dunes du Sahara — entre entraide, mécanique et dépassement de soi.
+      15 au 26 février 2026
     </p>
   </div>
-</section>
 
+  <!-- Bandeau orange en bas -->
+  <div style="
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #F37021;
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-align: center;
+    letter-spacing: 1px;
+  ">
+    LE RAID-AVENTURE DES PEUGEOT 205 AU MAROC !
+  </div>
+</section>
   <header>
     <h1>LAGBSR1 - Nomad'Raid 2026</h1>
     <p>Solidarité, aventure et entraide à travers le Maroc</p>
