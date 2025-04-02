@@ -115,35 +115,48 @@
   </style>
 </head>
 <body>
-<!-- BANNIÈRE NOMAD RAID – Image fond & texte centré -->
 <section style="
-  background: url('desert-banner.jpg') center/cover no-repeat;
-  min-height: 70vh;
+  position: relative;
+  height: 90vh;
+  background: url('nomad-background.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
   color: white;
 ">
 
-  <!-- Filtres sombres pour meilleure lisibilité -->
+  <!-- FOND GRADIENT SOMBRE -->
   <div style="
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
     z-index: 1;
   "></div>
 
-  <!-- Contenu -->
-  <div style="z-index: 2; padding: 2rem; max-width: 800px;">
-    <h1 style="font-size: 3.5rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px;">
+  <!-- CONTENU TEXTE -->
+  <div style="z-index: 2; text-align: center; padding: 2rem;">
+    <h1 style="
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    ">
       Nomad'Raid 2026
     </h1>
-    <p style="font-size: 1.3rem; line-height: 1.6;">
-      4000 kilomètres d'aventure humaine à bord de notre Peugeot 205.<br>
-      Désert, entraide, dépassement de soi. 🌍
+
+    <p style="
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      font-style: italic;
+    ">
+      Une Peugeot 205, deux aventuriers, 4000 km de paysages magiques à travers le Maroc.
+      De l’Atlas aux dunes du Sahara — entre entraide, mécanique et dépassement de soi.
     </p>
   </div>
 </section>
