@@ -16,7 +16,7 @@
       color: #333;
     }
     header {
-      background: url('banniere.jpg') no-repeat center center/cover;
+      background-color: #e67e22;
       color: white;
       text-align: center;
       padding: 6rem 1rem;
@@ -152,6 +152,28 @@
       cursor: pointer;
       display: none;
     }
+    .equipage p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .qr-donation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .qr-donation img {
+      width: 200px;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .map {
+      margin-top: 2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -160,89 +182,22 @@
     <p>Solidarité, aventure et entraide à travers le Maroc</p>
   </header>
 
-  <nav>
-    <a href="#projet">Notre projet</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#faq">FAQ</a>
-    <a href="#timeline">Itinéraire</a>
-    <a href="#budget">Budget</a>
-    <a href="#temoignages">Témoignages</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Toutes les sections précédentes ici... -->
 
-  <section id="projet">
-    <h2>Notre Projet</h2>
-    <p>Le Nomad Raid est une aventure humaine et solidaire à travers le Maroc. Du 8 au 19 février 2026, notre équipage parcourra 4000 km à bord d’une Peugeot 205, pour distribuer du matériel solidaire aux enfants marocains. Chaque don nous permet de nous rapprocher un peu plus de cet objectif.</p>
-  </section>
-
-  <section id="galerie">
-    <h2>Galerie</h2>
-    <div class="gallery">
-      <img src="205-desert.jpg" alt="Peugeot 205 dans le désert">
-      <img src="enfants.jpg" alt="Distribution de matériel solidaire">
-      <img src="equipage.jpg" alt="Notre équipage">
+  <section id="localisation">
+    <h2>Où nous trouver ?</h2>
+    <p>Le projet est basé au sein du CESI Campus d'Angoulême :</p>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2811.9203733293755!2d0.11980211599418049!3d45.633774527897116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ff7da7daeece83%3A0x27ddf6b3734b02b5!2sCESI%20Campus%20d'Angoul%C3%AAme!5e0!3m2!1sfr!2sfr!4v1711876523456!5m2!1sfr!2sfr"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: 10px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
-  </section>
-
-  <section id="sponsors">
-    <h2>Nos Sponsors</h2>
-    <div class="sponsor">
-      <img src="cesi-logo.png" alt="Logo CESI">
-      <p>Merci au CESI pour leur soutien dans cette aventure.</p>
-    </div>
-  </section>
-
-  <section id="faq">
-    <h2>FAQ</h2>
-    <p><strong>Pourquoi une cagnotte ?</strong><br>Parce que pour réaliser cette aventure solidaire, nous avons besoin d’un coup de pouce ! Les frais sont nombreux, et chaque euro nous aide à avancer.</p>
-  </section>
-
-  <section id="timeline" class="timeline">
-    <h2>Notre Itinéraire</h2>
-    <ul>
-      <li><strong>8 février :</strong> Départ de France</li>
-      <li><strong>12 février :</strong> Arrivée au Maroc</li>
-      <li><strong>14 février :</strong> Premiers villages solidaires</li>
-      <li><strong>17 février :</strong> Traversée du désert</li>
-      <li><strong>19 février :</strong> Clôture du raid</li>
-    </ul>
-  </section>
-
-  <section id="budget">
-    <h2>Budget Prévisionnel</h2>
-    <p>Voici un aperçu de notre budget. C’est grâce à votre soutien que cette aventure devient possible !</p>
-    <table class="budget-table">
-      <thead>
-        <tr><th>Dépense</th><th>Montant</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Achat de la voiture</td><td>2 500 €</td></tr>
-        <tr><td>Préparation mécanique</td><td>1 000 €</td></tr>
-        <tr><td>Inscription au raid</td><td>1 800 €</td></tr>
-        <tr><td>Carburant</td><td>1 200 €</td></tr>
-        <tr><td>Matériel solidaire (fournitures, vélos...)</td><td>500 €</td></tr>
-      </tbody>
-    </table>
-    <p style="text-align: center; margin-top: 2rem;">
-      <a href="https://www.leetchi.com/fr/c/nomad-raid-2026-5151434" target="_blank" style="background: #e67e22; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 10px;">💰 Contribuer à la cagnotte</a>
-    </p>
-  </section>
-
-  <section id="temoignages" class="testimonials">
-    <h2>Ils en parlent...</h2>
-    <blockquote>“Un projet qui redonne foi en l’humanité !” - Jean, sponsor</blockquote>
-    <blockquote>“Le sourire des enfants vaut tous les kilomètres parcourus.” - Loup, équipier</blockquote>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" class="contact-form">
-      <input type="text" name="nom" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
   </section>
 
   <footer>
