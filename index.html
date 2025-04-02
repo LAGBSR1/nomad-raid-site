@@ -5,126 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LAGBSR1 - Nomad Raid 2026</title>
   <meta name="description" content="Rejoignez LAGBSR1 pour le Nomad Raid 2026 : une aventure solidaire à travers le Maroc à bord d'une Peugeot 205. Aidez-nous à apporter des dons aux enfants du Maroc.">
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('images/background-nomadraid.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2e2e2e;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #e65100;
+      font-weight: bold;
+    }
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 1100px;
+    }
+    h2 {
+      color: #bf360c;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .grid-item {
+      flex: 1 1 220px;
+      max-width: 300px;
+      text-align: center;
+    }
+    .grid-item img {
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="logo-nomad-raid.png" alt="Logo Nomad Raid" class="logo">
-    <h1>LAGBSR1</h1>
-    <p>En route pour le Nomad Raid 2026 !</p>
+    <h1>LAGBSR1 - Nomad Raid 2026</h1>
+    <p>Une aventure humaine et solidaire au cœur du désert marocain</p>
   </header>
 
-  <main>
-    <div class="slideshow-container">
-      <div class="slide"><img src="slide1.jpg" alt="Paysage marocain avec la 205" loading="lazy"></div>
-      <div class="slide"><img src="slide2.jpg" alt="Enfants recevant des dons" loading="lazy"></div>
-      <div class="slide"><img src="slide3.jpg" alt="Vue du bivouac" loading="lazy"></div>
+  <nav>
+    <a href="#intro">L'aventure</a>
+    <a href="#solidarite">Solidarité</a>
+    <a href="#besoins">Besoins</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="intro">
+    <h2>Une aventure exceptionnelle</h2>
+    <p>Le <strong>Nomad Raid</strong> est une aventure exceptionnelle au Maroc, dédiée à la mythique Peugeot 205. Du 8 au 19 février 2026, notre équipage parcourra 4000 kilomètres de paysages à couper le souffle, allant des majestueuses montagnes de l’Atlas aux vastes dunes du Sahara. Plus qu'un simple rallye, cet événement organisé par <strong>AventuRaid</strong> allie passion automobile et engagement humanitaire.</p>
+    <p>Nous participerons à des actions solidaires : dons alimentaires, matériel scolaire, réparations de vélos, et repas solidaires. Soutenez notre équipage pour faire rayonner la solidarité franco-marocaine.</p>
+  </section>
+
+  <section id="solidarite">
+    <h2>Un raid solidaire</h2>
+    <p style="text-align: center;">5 actions humanitaires au cœur du désert :</p>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="icons/don-materiel.svg" alt="Don matériel">
+        <h4>Don de matériel</h4>
+        <p>20 kg de fournitures à destination des enfants : jouets, fournitures scolaires, produits d’hygiène...</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/velo.svg" alt="Don de vélo">
+        <h4>Don de vélo</h4>
+        <p>Chaque participant apporte un vélo réparé pour un enfant marocain.</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/reparation.svg" alt="Réparation">
+        <h4>Réparation de vélos</h4>
+        <p>Atelier sur place pour remettre en état les vélos des enfants.</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/couscous.svg" alt="Couscous">
+        <h4>Couscous solidaire</h4>
+        <p>Repas partagé dont les bénéfices servent à des projets locaux.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="besoins">
+    <h2>Besoins matériels</h2>
+    <p style="text-align: center;">Pour les enfants et la Peugeot 205 :</p>
+
+    <h3 style="text-align: center;">Matériel pour les enfants</h3>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="icons/velo-orange.svg" alt="Vélos">
+        <h4>2 vélos enfants/adultes</h4>
+        <p>Avec chambres à air, pneus, casques...</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/vetements-orange.svg" alt="Vêtements">
+        <h4>Vêtements</h4>
+        <p>Blousons, chaussures, pulls, pantalons...</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/jouets-orange.svg" alt="Jouets">
+        <h4>Jouets</h4>
+        <p>Ballons, jeux, coloriages, peluches...</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/medical-orange.svg" alt="Matériel médical">
+        <h4>Matériel médical</h4>
+        <p>Compresses, pansements, désinfectants (pas de médicaments).</p>
+      </div>
+      <div class="grid-item">
+        <img src="icons/hygiene-orange.svg" alt="Hygiène">
+        <h4>Produits d’hygiène</h4>
+        <p>Brosse à dents, gel douche, shampooing...</p>
+      </div>
     </div>
 
-    <nav>
-      <a href="#about">Notre Équipe</a>
-      <a href="#project">Projet</a>
-      <a href="#solidarity">Solidarité</a>
-      <a href="#needs">Besoins</a>
-      <a href="#sponsors">Sponsors</a>
-      <a href="#don">Don</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="raid-info">
-      <h2>Qu'est-ce que le Nomad Raid ?</h2>
-      <p>Le <strong>Nomad Raid</strong> est un raid automobile solidaire dans le désert marocain. Le but : traverser le pays en véhicule tout en apportant des dons matériels aux populations locales. Ce n’est pas une course de vitesse, mais un défi sportif et humanitaire.</p>
-    </section>
-
-    <section id="about">
-      <h2>Deux copains, une 205 et du sable</h2>
-      <h3>Oasis Riders</h3>
-      <p>Nous sommes Loup et Alexandre, deux amis d'enfance de Seine-et-Marne, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous réaliserons un rêve en participant au Nomad Raid à destination du Maroc à bord d’une Peugeot 205.</p>
-      <div class="images">
-        <img src="LAGBSR1-image1.jpg" alt="Préparation mécanique de la 205" loading="lazy">
-        <img src="LAGBSR1-image2.jpg" alt="Rencontre avec des enfants marocains" loading="lazy">
+    <h3 style="text-align: center;">Matériel pour la Peugeot 205</h3>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="icons/pieces-orange.svg" alt="Pièces détachées">
+        <h4>Pièces détachées</h4>
+        <p>Filtres, plaquettes, amortisseurs, barres de toit...</p>
       </div>
-      <div class="cta-buttons">
-        <a class="btn" href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank">Faire un don via Leetchi</a>
-        <a class="btn" href="#sponsors">Devenir sponsor</a>
+      <div class="grid-item">
+        <img src="icons/pneus-orange.svg" alt="Pneus">
+        <h4>Pneus</h4>
+        <p>Pneus adaptés au désert</p>
       </div>
-    </section>
-
-    <section id="needs">
-      <h2>Nos besoins</h2>
-      <h3>Budget estimé : 8240 €</h3>
-      <ul>
-        <li>Inscription : 3240 €</li>
-        <li>Assurance maladie et rapatriement : 40 €</li>
-        <li>Hébergements : 750 €</li>
-        <li>Repas : 120 €</li>
-        <li>Matériel de bivouac : 500 €</li>
-        <li>Péages : 250 €</li>
-        <li>Carburant : 750 €</li>
-        <li>Achat véhicule : 2300 €</li>
-        <li>Assurance véhicule : 480 €</li>
-        <li>Mécanique, réparations : 1500 €</li>
-        <li>Marge supplémentaire : 1000 €</li>
-      </ul>
-      <img src="camembert-budget.png" alt="Répartition budgétaire" loading="lazy">
-    </section>
-
-    <section id="sponsors" class="sponsor-benefits">
-      <h2>Avantages pour les sponsors</h2>
-      <div class="sponsor-benefits-content">
-        <img src="sponsors-avantages.jpg" alt="Visibilité pour les sponsors" loading="lazy">
-        <div>
-          <h3>Médiatisation</h3>
-          <ul>
-            <li>Photos/vidéos pro</li>
-            <li>Réseaux sociaux + presse</li>
-            <li><a href="https://www.nomadraid.fr" target="_blank">www.nomadraid.fr</a></li>
-          </ul>
-          <h3>Visibilité pendant l’événement</h3>
-          <ul>
-            <li>Logo sur véhicule</li>
-            <li>Médias et interviews</li>
-          </ul>
-          <h3>Image & Valeurs</h3>
-          <p>Engagement solidaire valorisé</p>
-        </div>
+      <div class="grid-item">
+        <img src="icons/mecanique-orange.svg" alt="Assistance mécanique">
+        <h4>Assistance mécanique</h4>
+        <p>Un coup de main technique en cas de panne</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="don">
-      <h2>Faire un don</h2>
-      <p>Tout soutien, financier ou matériel, a un impact fort. Merci 💛</p>
-      <a class="btn" href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank">>> Faire un don via Leetchi <<</a>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Besoin d'infos ? Écrivez-nous :</p>
-      <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain" class="contact-form">
-        <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="Prénom" placeholder="Prénom" required>
-
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="Nom" placeholder="Nom" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="Email" placeholder="Email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="Message" rows="4" placeholder="Votre message..." required></textarea>
-
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-      <iframe src="https://www.google.com/maps?q=CESI+Angoulême&output=embed" title="Localisation CESI"></iframe>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align: center;">Envie de soutenir notre projet ou de poser une question ?</p>
+    <p style="text-align: center;">📩 <strong>lagbsr1.nomad@gmail.com</strong></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 LAGBSR1 | Nomad Raid</p>
   </footer>
-
-  <p class="note">Version alternative : formulaire connecté à Google Sheet possible.</p>
 </body>
 </html>
-
