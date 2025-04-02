@@ -115,21 +115,40 @@
   </style>
 </head>
 <body>
-<!-- BANDEAU ORANGE AVEC IMAGE -->
-<section id="accueil" style="background-color: #e67e22; padding: 5rem 2rem; text-align: center; color: white;">
-  <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">LAGBSR1 - Nomad'Raid 2026</h1>
-  <p style="font-size: 1.2rem;">Solidarité, aventure et entraide à travers le Maroc</p>
+<!-- BANDEAU D’ACCUEIL AVEC IMAGE DE FOND -->
+<section style="
+  background: url('bandeau-nomadraid.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+">
 
-  <!-- Image sous le texte -->
-  <div style="margin-top: 2.5rem;">
-    <img src="205-desert.jpg" alt="Peugeot 205 dans le désert" style="
-      max-width: 90%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    ">
+  <!-- Overlay sombre pour lisibilité -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  "></div>
+
+  <!-- Contenu centré -->
+  <div style="z-index: 2; padding: 2rem;">
+    <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">
+      LAGBSR1 - Nomad’Raid 2026
+    </h1>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: auto;">
+      Une traversée solidaire et humaine de 4000 km à travers le Maroc,<br>
+      à bord de la mythique Peugeot 205 🚗🌍
+    </p>
   </div>
+
 </section>
+
 
   <header>
     <h1>LAGBSR1 - Nomad'Raid 2026</h1>
