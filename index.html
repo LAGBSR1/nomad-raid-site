@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LAGBSR1 - Nomad Raid 2026</title>
   <meta name="description" content="Rejoignez LAGBSR1 pour le Nomad Raid 2026 : une aventure solidaire à travers le Maroc à bord d'une Peugeot 205. Aidez-nous à apporter des dons aux enfants du Maroc.">
-  <link rel="stylesheet" href="styles.min.css">
-  <script src="scripts.min.js" defer></script>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: #fff8e1;
       color: #3e2723;
+      line-height: 1.6;
     }
     header {
       background: #ff8f00;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
       position: relative;
     }
@@ -45,6 +44,10 @@
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
+      background: white;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     .btn {
       background-color: #e65100;
@@ -54,26 +57,23 @@
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
-      margin-top: 1rem;
+      margin: 1rem 0.5rem 0 0;
     }
     .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
+      max-width: 1000px;
+      margin: 2rem auto;
     }
     .slide {
-      display: none;
-      width: 100%;
+      position: relative;
+      margin-bottom: 1rem;
     }
     .slide img {
       width: 100%;
-      height: auto;
+      border-radius: 10px;
     }
     .slide figcaption {
       text-align: center;
       font-style: italic;
-      background: rgba(255, 255, 255, 0.8);
       padding: 0.5rem;
       color: #5d4037;
     }
@@ -89,52 +89,95 @@
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
     }
-    .sponsor-benefits {
-      background-color: #3b5998;
-      color: white;
-      padding: 2rem;
-    }
-    .sponsor-benefits h2, .sponsor-benefits h3 {
-      color: white;
-    }
-    .contact-form input, .contact-form textarea, .contact-form button {
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
       padding: 10px;
       margin-bottom: 1rem;
       width: 100%;
       max-width: 600px;
       display: block;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
     .contact-form button {
       background-color: #ff6f00;
       color: white;
+      font-weight: bold;
+      border: none;
       cursor: pointer;
+    }
+    @media (max-width: 700px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="logo-nomad-raid.png" alt="Logo Nomad Raid" class="logo">
     <h1>LAGBSR1</h1>
     <p>En route pour le Nomad Raid 2026 !</p>
   </header>
 
+  <nav>
+    <a href="#about">Notre Équipe</a>
+    <a href="#project">Projet</a>
+    <a href="#solidarity">Solidarité</a>
+    <a href="#needs">Besoins</a>
+    <a href="#sponsors">Sponsors</a>
+    <a href="#don">Don</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="slideshow-container">
     <figure class="slide">
-      <img src="slide1.jpg" alt="Départ du Nomad Raid avec la Peugeot 205 chargée de matériel" loading="lazy">
+      <img src="slide1.jpg" alt="Départ du Nomad Raid avec la Peugeot 205">
       <figcaption>Départ du Nomad Raid avec la Peugeot 205 chargée de matériel</figcaption>
     </figure>
     <figure class="slide">
-      <img src="slide2.jpg" alt="Distribution de jouets et fournitures dans un village marocain" loading="lazy">
+      <img src="slide2.jpg" alt="Distribution de jouets et fournitures">
       <figcaption>Distribution de jouets et fournitures dans un village marocain</figcaption>
     </figure>
     <figure class="slide">
-      <img src="slide3.jpg" alt="Traversée des paysages désertiques du Maroc" loading="lazy">
+      <img src="slide3.jpg" alt="Paysages du désert marocain">
       <figcaption>Traversée des paysages désertiques du Maroc</figcaption>
     </figure>
   </div>
 
-  <!-- Le reste du contenu du site continue ici comme dans le fichier d'origine -->
+  <section id="about">
+    <h2>Deux copains, une 205 et du sable</h2>
+    <p>Nous sommes Loup et Alexandre, deux amis d'enfance de Seine-et-Marne, unis par notre passion pour l’automobile, les voyages et les défis. En février 2026, nous réaliserons un rêve en participant au Nomad Raid à destination du Maroc à bord d’une Peugeot 205.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+      <img src="LAGBSR1-image1.jpg" alt="Préparation mécanique" style="max-width: 45%; border-radius: 10px;">
+      <img src="LAGBSR1-image2.jpg" alt="Véhicules et enfants" style="max-width: 45%; border-radius: 10px;">
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a class="btn" href="https://www.leetchi.com/fr/c/lagbsr1-nomadraid" target="_blank">Faire un don</a>
+      <a class="btn" href="#sponsors">Devenir sponsor</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Besoin d'infos ? Écrivez-nous :</p>
+    <form action="mailto:lagbsr1.nomad@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <input type="text" name="Prénom" placeholder="Prénom" required>
+      <input type="text" name="Nom" placeholder="Nom" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Message" rows="4" placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <iframe src="https://www.google.com/maps?q=CESI+Angoulême&output=embed"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LAGBSR1 | Nomad Raid</p>
+  </footer>
+
 </body>
 </html>
